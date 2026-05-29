@@ -1,0 +1,210 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact">
+
+<section class="page-hero">
+  <div class="container fade-up">
+    <span class="eyebrow eyebrow-light">Get in touch</span>
+    <h1>Your first step is<br>a conversation.</h1>
+    <p class="page-hero-sub">No pressure, no commitment. Just a real conversation about what you need and whether Behold Your Wonder is the right fit for you.</p>
+  </div>
+</section>
+
+<section class="consult">
+  <div class="container">
+    <div class="consult-grid">
+      <div class="consult-info fade-up">
+        <span class="eyebrow eyebrow-dark">Free consultation</span>
+        <h2>Book a free 20-minute consult</h2>
+        <p>Your free consultation is a call with your Mental Health Coordinator — not a sales call. It's a real conversation about what you're navigating, what you're looking for, and whether BYW is the right place for you.</p>
+        <div class="consult-steps">
+          <div class="consult-step"><div class="step-num">1</div><p class="step-text"><strong>Book online</strong> — choose a time that works for you using our scheduling link.</p></div>
+          <div class="consult-step"><div class="step-num">2</div><p class="step-text"><strong>Talk to your coordinator</strong> — 20 minutes to understand your needs and answer your questions.</p></div>
+          <div class="consult-step"><div class="step-num">3</div><p class="step-text"><strong>Get matched</strong> — if BYW is right for you, we'll pair you with the appropriate clinician and get you scheduled.</p></div>
+        </div>
+        <p class="consult-note">All consultations are confidential. There is no obligation to continue after your initial call.</p>
+      </div>
+      <div class="fade-up">
+        <div class="consult-cta-block">
+          <h3>Book your free consult</h3>
+          <p>Select a time that works for you. We'll send a confirmation with everything you need to know before your call.</p>
+          <!-- REPLACE href WITH YOUR SIMPLEPRACTICE BOOKING LINK -->
+          <a href="YOUR_SIMPLEPRACTICE_BOOKING_LINK" class="btn-book" target="_blank" rel="noopener">Schedule now →</a>
+          <p class="book-note">Free · 20 minutes · No commitment required</p>
+          <div class="response-strip">
+            <div class="response-dot"></div>
+            <p class="response-text">We respond to all inquiries within 1 business day.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="inquiry">
+  <div class="container">
+    <div class="inquiry-grid">
+      <div class="fade-up">
+        <span class="eyebrow eyebrow-light">General inquiries</span>
+        <h3>Send us a message</h3>
+        <p>Have a question before you book? Want to learn more about our services, pricing, or whether we serve your state?</p>
+        <form id="general-form">
+          <div class="form-field"><label class="form-label" for="name">Your name</label><input class="form-input" type="text" id="name" name="name" placeholder="First and last name" required></div>
+          <div class="form-field"><label class="form-label" for="email">Email address</label><input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required></div>
+          <div class="form-field">
+            <label class="form-label" for="state">State you reside in</label>
+            <select class="form-select" id="state" name="state">
+              <option value="">Select your state</option>
+              <option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option><option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option><option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option><option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option><option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option><option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option><option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option><option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option><option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option><option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option><option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option><option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option><option>Wisconsin</option><option>Wyoming</option>
+            </select>
+          </div>
+          <div class="form-field"><label class="form-label" for="message">Your message</label><textarea class="form-textarea" id="message" name="message" placeholder="What would you like to know?" required></textarea></div>
+          <button class="form-submit" type="submit" id="general-btn">Send message</button>
+          <p class="form-privacy">Your information is kept confidential and never shared.</p>
+        </form>
+      </div>
+      <div class="fade-up">
+        <span class="eyebrow eyebrow-light">For clinicians & specialists</span>
+        <h3>Join our network</h3>
+        <p>Are you a licensed therapist interested in practicing with BYW, or a specialist interested in joining our referral network?</p>
+        <form id="clinician-form">
+          <div class="form-field"><label class="form-label" for="c-name">Your name</label><input class="form-input" type="text" id="c-name" name="name" placeholder="First and last name" required></div>
+          <div class="form-field"><label class="form-label" for="c-email">Email address</label><input class="form-input" type="email" id="c-email" name="email" placeholder="your@email.com" required></div>
+          <div class="form-field">
+            <label class="form-label" for="c-type">I am a</label>
+            <select class="form-select" id="c-type" name="type">
+              <option value="">Select your role</option>
+              <option>Licensed therapist (LMFT, LPC, LCSW)</option>
+              <option>PMHNP / Psychiatrist</option>
+              <option>OBGYN / Reproductive Endocrinologist</option>
+              <option>Women's Health NP</option>
+              <option>Endocrinologist</option>
+              <option>Birth or Postpartum Doula</option>
+              <option>Lactation Consultant (IBCLC)</option>
+              <option>Fertility Coach</option>
+              <option>Acupuncturist</option>
+              <option>Other specialist</option>
+            </select>
+          </div>
+          <div class="form-field"><label class="form-label" for="c-license">License number & state</label><input class="form-input" type="text" id="c-license" name="license" placeholder="e.g. LMFT12345 — California"></div>
+          <div class="form-field"><label class="form-label" for="c-message">Tell us about your practice</label><textarea class="form-textarea" id="c-message" name="message" placeholder="Your specialty, experience with hormonal health, and why you're interested in BYW..." required></textarea></div>
+          <button class="form-submit" type="submit" id="clinician-btn">Submit inquiry</button>
+          <p class="form-privacy">All applications are reviewed by our clinical team.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="states">
+  <div class="container">
+    <div class="states-head fade-up">
+      <span class="eyebrow eyebrow-dark">Availability</span>
+      <h2>States we currently serve</h2>
+      <p>Telehealth services must be provided in the state where you are physically located. Our licensed coverage is actively expanding.</p>
+    </div>
+    <div class="states-note fade-up">
+      <p>We are currently accepting clients in select states based on our clinicians' active licensure. Please contact us directly or book a free consultation to confirm whether we serve your state.</p>
+      <p>If we do not yet serve your state, we will add you to our waitlist and notify you as we expand coverage.</p>
+    </div>
+  </div>
+</section>
+
+<section class="crisis">
+  <div class="container">
+    <div class="crisis-inner fade-up">
+      <h3>If you are in crisis</h3>
+      <p>Behold Your Wonder is not a crisis service. If you are experiencing a mental health emergency or are in immediate danger, please contact emergency services or one of the resources below.</p>
+      <div class="crisis-numbers">
+        <div class="crisis-number"><p class="crisis-name">988 Suicide & Crisis Lifeline</p><p class="crisis-num">Call or text 988</p></div>
+        <div class="crisis-number"><p class="crisis-name">Crisis Text Line</p><p class="crisis-num">Text HOME to 741741</p></div>
+        <div class="crisis-number"><p class="crisis-name">Emergency Services</p><p class="crisis-num">Call 911</p></div>
+        <div class="crisis-number"><p class="crisis-name">Postpartum Support Intl</p><p class="crisis-num">1-800-944-4773</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</Layout>
+
+<style>
+.page-hero{background:var(--green-mid);padding:clamp(64px,10vw,110px) 0;text-align:center}
+.page-hero h1{color:#fff;margin-bottom:18px}
+.page-hero-sub{font-size:clamp(14px,1.8vw,16px);color:rgba(255,255,255,0.6);line-height:1.75;max-width:520px;margin:0 auto}
+.consult{background:var(--cream);padding:var(--pad) 0}
+.consult-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:start}
+.consult-info h2{color:var(--green-dark);margin-bottom:16px}
+.consult-info p{font-size:clamp(13px,1.5vw,15px);color:#5A4A40;line-height:1.85;margin-bottom:24px}
+.consult-steps{display:flex;flex-direction:column;gap:16px;margin-bottom:32px}
+.consult-step{display:flex;gap:16px;align-items:flex-start}
+.step-num{width:28px;height:28px;border-radius:50%;background:var(--rose-light);border:0.5px solid rgba(196,145,122,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;font-weight:500;color:var(--rose)}
+.step-text{font-size:clamp(13px,1.4vw,14px);color:#5A4A40;line-height:1.65;padding-top:4px}
+.step-text strong{color:var(--green-dark);font-weight:500}
+.consult-note{font-size:12px;color:#9A8A80;line-height:1.6;border-left:2px solid rgba(196,145,122,0.3);padding-left:14px}
+.consult-cta-block{background:var(--green-dark);border-radius:var(--radius-lg);padding:clamp(28px,4vw,44px)}
+.consult-cta-block h3{color:#fff;margin-bottom:12px}
+.consult-cta-block p{font-size:clamp(13px,1.4vw,14px);color:rgba(255,255,255,0.55);line-height:1.75;margin-bottom:24px}
+.btn-book{display:block;background:var(--rose);color:#fff;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:16px 28px;border-radius:var(--radius-pill);text-align:center;transition:opacity 0.2s;margin-bottom:12px}
+.btn-book:hover{opacity:0.88}
+.book-note{font-size:11px;color:rgba(255,255,255,0.3);text-align:center;line-height:1.6}
+.response-strip{background:rgba(255,255,255,0.05);border-radius:var(--radius-md);border:0.5px solid rgba(255,255,255,0.08);padding:14px 18px;display:flex;align-items:center;gap:12px;margin-top:16px}
+.response-dot{width:7px;height:7px;border-radius:50%;background:#6DBF8A;flex-shrink:0}
+.response-text{font-size:12px;color:rgba(255,255,255,0.5);line-height:1.5}
+.inquiry{background:var(--green-mid);padding:var(--pad) 0}
+.inquiry-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px)}
+.inquiry-grid h3{color:#fff;margin-bottom:10px}
+.inquiry-grid p{font-size:clamp(12px,1.4vw,14px);color:rgba(255,255,255,0.52);line-height:1.75;margin-bottom:24px}
+.form-field{margin-bottom:18px}
+.form-label{font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.4);display:block;margin-bottom:8px}
+.form-input,.form-textarea,.form-select{width:100%;background:rgba(255,255,255,0.06);border:0.5px solid rgba(255,255,255,0.12);border-radius:var(--radius-sm);padding:12px 14px;font-size:14px;font-family:'DM Sans',sans-serif;color:#fff;outline:none;transition:border-color 0.2s}
+.form-input::placeholder,.form-textarea::placeholder{color:rgba(255,255,255,0.25)}
+.form-input:focus,.form-textarea:focus,.form-select:focus{border-color:rgba(196,145,122,0.6)}
+.form-textarea{resize:vertical;min-height:120px}
+.form-select{color:rgba(255,255,255,0.6);cursor:pointer}
+.form-select option{background:var(--green-mid);color:#fff}
+.form-submit{background:var(--rose);color:#fff;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:14px 28px;border-radius:var(--radius-pill);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;transition:opacity 0.2s;width:100%}
+.form-submit:hover{opacity:0.88}
+.form-privacy{font-size:11px;color:rgba(255,255,255,0.25);text-align:center;margin-top:10px;line-height:1.6}
+.states{background:var(--cream);padding:var(--pad) 0}
+.states-head{text-align:center;margin-bottom:clamp(32px,4vw,48px)}
+.states-head h2{color:var(--green-dark)}
+.states-head p{font-size:clamp(13px,1.5vw,15px);color:#5A4A40;margin-top:12px;line-height:1.7;max-width:520px;margin-left:auto;margin-right:auto}
+.states-note{background:#fff;border:0.5px solid rgba(30,45,30,0.1);border-radius:var(--radius-lg);padding:clamp(28px,4vw,44px);max-width:680px;margin:0 auto;text-align:center}
+.states-note p{font-size:clamp(13px,1.5vw,15px);color:#5A4A40;line-height:1.8;margin-bottom:12px}
+.states-note p:last-child{margin-bottom:0}
+.crisis{background:var(--green-dark);padding:clamp(40px,5vw,64px) 0}
+.crisis-inner{max-width:680px;margin:0 auto;text-align:center}
+.crisis-inner h3{color:#fff;margin-bottom:12px}
+.crisis-inner p{font-size:clamp(13px,1.5vw,14px);color:rgba(255,255,255,0.5);line-height:1.8;margin-bottom:20px}
+.crisis-numbers{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.crisis-number{background:rgba(255,255,255,0.06);border:0.5px solid rgba(255,255,255,0.1);border-radius:var(--radius-md);padding:14px 20px;text-align:center}
+.crisis-name{font-size:12px;font-weight:500;color:#fff;margin-bottom:3px}
+.crisis-num{font-size:13px;color:var(--rose)}
+@media(max-width:900px){.consult-grid,.inquiry-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.crisis-numbers{flex-direction:column;align-items:center}}
+</style>
+
+<script>
+const observer = new IntersectionObserver(e => {
+  e.forEach(t => { if(t.isIntersecting){ t.target.classList.add('visible'); observer.unobserve(t.target); }});
+}, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+document.getElementById('general-form')?.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const btn = document.getElementById('general-btn');
+  btn.textContent = 'Message sent ✓';
+  btn.style.background = '#1E2D1E';
+  btn.disabled = true;
+});
+
+document.getElementById('clinician-form')?.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const btn = document.getElementById('clinician-btn');
+  btn.textContent = 'Inquiry sent ✓';
+  btn.style.background = '#1E2D1E';
+  btn.disabled = true;
+});
+</script>

@@ -1,0 +1,47 @@
+---
+---
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <img src="/logo.png" alt="Behold Your Wonder" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span style="display:none;color:#fff;font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;">Behold Your Wonder</span>
+    </a>
+    <div class="nav-links">
+      <a href="/about" class="nav-link">About</a>
+      <a href="/services" class="nav-link">Services</a>
+      <a href="/cmbt" class="nav-link">CMBT</a>
+      <a href="/resources" class="nav-link">Resources</a>
+      <a href="/contact" class="nav-link">Contact</a>
+    </div>
+    <a href="/contact" class="nav-cta">Book a consult</a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="/about" class="nav-mobile-link">About</a>
+    <a href="/services" class="nav-mobile-link">Services</a>
+    <a href="/cmbt" class="nav-mobile-link">CMBT</a>
+    <a href="/resources" class="nav-mobile-link">Resources</a>
+    <a href="/contact" class="nav-mobile-link">Contact</a>
+    <a href="/contact" class="nav-mobile-cta">Book a consult</a>
+  </div>
+</nav>
+
+<script>
+const nav = document.getElementById('nav');
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('nav-mobile');
+window.addEventListener('scroll', () => {
+  nav.style.background = window.scrollY > 20 ? 'rgba(42,56,40,0.96)' : '#2A3828';
+}, { passive: true });
+hamburger.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', isOpen);
+  hamburger.setAttribute('aria-expanded', isOpen);
+});
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+}));
+</script>

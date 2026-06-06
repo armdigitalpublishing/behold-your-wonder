@@ -16,23 +16,24 @@ import Layout from '../layouts/Layout.astro';
   <div class="container">
     <div class="consult-grid">
       <div class="consult-info fade-up">
-        <span class="eyebrow eyebrow-dark">Free consultation</span>
-        <h2>Book a free 20-minute consult</h2>
-        <p>Your free consultation is a call with your Mental Health Coordinator — not a sales call. It's a real conversation about what you're navigating, what you're looking for, and whether BYW is the right place for you.</p>
+        <span class="eyebrow eyebrow-dark">Getting support is easy.</span>
+        <h2>Book a consultation</h2>
+        <p>Your 25-minute session with our specialized director — a focused, professional conversation about what you're navigating and whether BYW is the right fit for you.
+</p>
         <div class="consult-steps">
-          <div class="consult-step"><div class="step-num">1</div><p class="step-text"><strong>Book online</strong> — choose a time that works for you using our scheduling link.</p></div>
-          <div class="consult-step"><div class="step-num">2</div><p class="step-text"><strong>Talk to your coordinator</strong> — 20 minutes to understand your needs and answer your questions.</p></div>
-          <div class="consult-step"><div class="step-num">3</div><p class="step-text"><strong>Get matched</strong> — if BYW is right for you, we'll pair you with the appropriate clinician and get you scheduled.</p></div>
+          <div class="consult-step"><div class="step-num">1</div><p class="step-text"><strong>Book online</strong> — schedule your 25-minute consultation through our secure booking portal.</p></div>
+          <div class="consult-step"><div class="step-num">2</div><p class="step-text"><strong>Meet with our specialized director of hormonal mental health</strong> — a dedicated session to understand your needs, answer your questions, and assess the right care path for you.</p></div>
+          <div class="consult-step"><div class="step-num">3</div><p class="step-text"><strong>Get matched</strong> — if BYW is right for you, we'll match you with one of our natively trained therapists and get you scheduled.</p></div>
         </div>
         <p class="consult-note">All consultations are confidential. There is no obligation to continue after your initial call.</p>
       </div>
       <div class="fade-up">
         <div class="consult-cta-block">
-          <h3>Book your free consult</h3>
+          <h3>Book your 25-minute consult</h3>
           <p>Select a time that works for you. We'll send a confirmation with everything you need to know before your call.</p>
           <!-- REPLACE href WITH YOUR SIMPLEPRACTICE BOOKING LINK -->
           <a href="YOUR_SIMPLEPRACTICE_BOOKING_LINK" class="btn-book" target="_blank" rel="noopener">Schedule now →</a>
-          <p class="book-note">Free · 20 minutes · No commitment required</p>
+          <p class="book-note">$65 · 25 minutes · Professional Consultation</p>
           <div class="response-strip">
             <div class="response-dot"></div>
             <p class="response-text">We respond to all inquiries within 1 business day.</p>
@@ -50,7 +51,7 @@ import Layout from '../layouts/Layout.astro';
         <span class="eyebrow eyebrow-light">General inquiries</span>
         <h3>Send us a message</h3>
         <p>Have a question before you book? Want to learn more about our services, pricing, or whether we serve your state?</p>
-        <form id="general-form">
+        <form id="general-form" action="https://formspree.io/f/xwvjvdpz" method="POST">
           <div class="form-field"><label class="form-label" for="name">Your name</label><input class="form-input" type="text" id="name" name="name" placeholder="First and last name" required></div>
           <div class="form-field"><label class="form-label" for="email">Email address</label><input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required></div>
           <div class="form-field">
@@ -69,7 +70,7 @@ import Layout from '../layouts/Layout.astro';
         <span class="eyebrow eyebrow-light">For clinicians & specialists</span>
         <h3>Join our network</h3>
         <p>Are you a licensed therapist interested in practicing with BYW, or a specialist interested in joining our referral network?</p>
-        <form id="clinician-form">
+        <form id="clinician-form" action="https://formspree.io/f/mbdedvlv" method="POST">
           <div class="form-field"><label class="form-label" for="c-name">Your name</label><input class="form-input" type="text" id="c-name" name="name" placeholder="First and last name" required></div>
           <div class="form-field"><label class="form-label" for="c-email">Email address</label><input class="form-input" type="email" id="c-email" name="email" placeholder="your@email.com" required></div>
           <div class="form-field">
@@ -103,11 +104,12 @@ import Layout from '../layouts/Layout.astro';
     <div class="states-head fade-up">
       <span class="eyebrow eyebrow-dark">Availability</span>
       <h2>States we currently serve</h2>
-      <p>Telehealth services must be provided in the state where you are physically located. Our licensed coverage is actively expanding.</p>
+      <p>Our licensed coverage is active in
+California, Arizona, Nevada, and Colorado </p>
     </div>
     <div class="states-note fade-up">
-      <p>We are currently accepting clients in select states based on our clinicians' active licensure. Please contact us directly or book a free consultation to confirm whether we serve your state.</p>
-      <p>If we do not yet serve your state, we will add you to our waitlist and notify you as we expand coverage.</p>
+      <p>For individual therapy, services must be provided in the state where you are physically located at the time of your session. We are working to bring BYW to more women across the country and will continue to grow our reach.</p>
+      <p>Not in one of those states? Our async clinical support and educational workshops are available to women everywhere — no location restrictions. You can access our between-session messaging support and attend our online workshops regardless of where you live.</p>
     </div>
   </div>
 </section>
@@ -192,19 +194,4 @@ const observer = new IntersectionObserver(e => {
 }, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-document.getElementById('general-form')?.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const btn = document.getElementById('general-btn');
-  btn.textContent = 'Message sent ✓';
-  btn.style.background = '#1E2D1E';
-  btn.disabled = true;
-});
-
-document.getElementById('clinician-form')?.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const btn = document.getElementById('clinician-btn');
-  btn.textContent = 'Inquiry sent ✓';
-  btn.style.background = '#1E2D1E';
-  btn.disabled = true;
-});
 </script>

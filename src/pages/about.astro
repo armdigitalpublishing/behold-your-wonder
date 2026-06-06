@@ -23,11 +23,12 @@ import Layout from '../layouts/Layout.astro';
           <p>Behold Your Wonder was built to change that. Not generic therapy adapted for women. Not a wellness platform light on clinical rigor. A real clinical environment designed specifically for the hormonal, emotional, and relational complexity of women's lives.</p>
         </div>
       </div>
-      <div class="story-img">
-        <p class="story-img-placeholder">Founder photo<br>coming soon</p>
-      </div>
-    </div>
+ <div>
+  <div class="story-img-wrap">
+    <img src="/all_women.jpg" alt="Women of all backgrounds served at Behold Your Wonder" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:var(--radius-lg)">
   </div>
+  <p class="photo-credit">Photo by <a href="https://www.instagram.com/anntarazevich" target="_blank" rel="noopener">Anna Tarazevich</a></p>
+</div>
 </section>
 
 <section class="mission">
@@ -87,8 +88,7 @@ import Layout from '../layouts/Layout.astro';
 <section class="founder">
   <div class="container fade-up">
     <div class="founder-card">
-      <div class="founder-photo"><span class="founder-initials">SH</span></div>
-      <div>
+<div class="founder-photo"><img src="/salatha_LMFT.jpg" alt="Salatha Helton, LMFT" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-md)"></div>      <div>
         <p class="founder-name">Salatha Helton</p>
         <p class="founder-cred">LMFT · Founder & Clinical Director</p>
         <div class="founder-bio">
@@ -124,7 +124,10 @@ import Layout from '../layouts/Layout.astro';
 .story-label{font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--rose);margin-bottom:14px;display:block}
 .story-text{font-size:clamp(14px,1.6vw,16px);color:#5A4A40;line-height:1.85}
 .story-text p+p{margin-top:16px}
-.story-img{background:var(--green-mid);border-radius:var(--radius-lg);aspect-ratio:4/5;display:flex;align-items:center;justify-content:center}
+.story-img-wrap{position:relative;border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/5}
+.story-img-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-credit{text-align:center;font-size:11px;color:#9A8A80;margin-top:8px}
+.photo-credit a{color:rgba(255,255,255,0.9);text-decoration:underline}
 .story-img-placeholder{font-family:var(--serif);font-size:13px;color:rgba(255,255,255,0.2);text-align:center;padding:32px}
 .mission{background:var(--green-dark);padding:var(--pad) 0;text-align:center}
 .mission-quote{font-family:var(--serif);font-size:clamp(22px,3.5vw,38px);font-style:italic;color:#fff;line-height:1.4;max-width:800px;margin:0 auto 28px;font-weight:400}
@@ -163,6 +166,10 @@ import Layout from '../layouts/Layout.astro';
 .btn-outline-light:hover{border-color:#fff;color:#fff}
 @media(max-width:900px){.story-grid,.diff-grid,.founder-card{grid-template-columns:1fr}.story-img{aspect-ratio:16/9}.pillar-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.pillar-grid{grid-template-columns:1fr}}
+
+.photo-credit{font-size:11px;color:#9A8A80;margin-top:8px;text-align:center}
+.photo-credit a{color:var(--rose)}
+
 </style>
 
 <script>

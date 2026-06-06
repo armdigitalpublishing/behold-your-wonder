@@ -120,10 +120,10 @@ California, Arizona, Nevada, and Colorado </p>
       <h3>If you are in crisis</h3>
       <p>Behold Your Wonder is not a crisis service. If you are experiencing a mental health emergency or are in immediate danger, please contact emergency services or one of the resources below.</p>
       <div class="crisis-numbers">
-        <div class="crisis-number"><p class="crisis-name">988 Suicide & Crisis Lifeline</p><p class="crisis-num">Call or text 988</p></div>
-        <div class="crisis-number"><p class="crisis-name">Crisis Text Line</p><p class="crisis-num">Text HOME to 741741</p></div>
-        <div class="crisis-number"><p class="crisis-name">Emergency Services</p><p class="crisis-num">Call 911</p></div>
-        <div class="crisis-number"><p class="crisis-name">Postpartum Support Intl</p><p class="crisis-num">1-800-944-4773</p></div>
+       <a href="tel:988" class="crisis-number"><p class="crisis-name">988 Suicide & Crisis Lifeline</p><p class="crisis-num">Call or text 988</p></a>
+<a href="sms:741741" class="crisis-number"><p class="crisis-name">Crisis Text Line</p><p class="crisis-num">Text HOME to 741741</p></a>
+<a href="tel:911" class="crisis-number"><p class="crisis-name">Emergency Services</p><p class="crisis-num">Call 911</p></a>
+<a href="tel:18009444773" class="crisis-number"><p class="crisis-name">Postpartum Support Intl</p><p class="crisis-num">1-800-944-4773</p></a>
       </div>
     </div>
   </div>
@@ -180,12 +180,16 @@ California, Arizona, Nevada, and Colorado </p>
 .crisis-inner{max-width:680px;margin:0 auto;text-align:center}
 .crisis-inner h3{color:#fff;margin-bottom:12px}
 .crisis-inner p{font-size:clamp(13px,1.5vw,14px);color:rgba(255,255,255,0.5);line-height:1.8;margin-bottom:20px}
-.crisis-numbers{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.crisis-numbers{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:680px;margin:0 auto}
 .crisis-number{background:rgba(255,255,255,0.06);border:0.5px solid rgba(255,255,255,0.1);border-radius:var(--radius-md);padding:14px 20px;text-align:center}
 .crisis-name{font-size:12px;font-weight:500;color:#fff;margin-bottom:3px}
 .crisis-num{font-size:13px;color:var(--rose)}
 @media(max-width:900px){.consult-grid,.inquiry-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.crisis-numbers{flex-direction:column;align-items:center}}
+
+a.crisis-number{cursor:pointer;transition:background 0.2s}
+a.crisis-number:hover{background:rgba(255,255,255,0.1)}
+
 </style>
 
 <script>

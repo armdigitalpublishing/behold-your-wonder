@@ -14,7 +14,7 @@ import Layout from '../layouts/Layout.astro';
   <div class="hero-content fade-up">
     <span class="eyebrow eyebrow-dark">Women's mental health · Hormonal care · Online clinic</span>
     <h1>Your hormones affect everything.<br>Your care should reflect that.</h1>
-    <p class="hero-sub">Behold Your Wonder is an online clinic for women navigating PMDD, perimenopause, postpartum, fertility, and the emotional weight of hormonal health.</p>
+    <p class="hero-sub">Behold Your Wonder is an online mental health clinic for women navigating PMDD, perimenopause, postpartum, fertility, and the emotional weight of hormonal health.</p>
     <div class="btn-row">
       <a href="/contact" class="btn-primary">Book a consult</a>
       <a href="/resources" class="btn-outline">Take a quiz</a>
@@ -93,8 +93,8 @@ import Layout from '../layouts/Layout.astro';
     <div class="steps">
       <div class="step fade-up">
         <div class="step-num" aria-hidden="true">01</div>
-        <p class="step-title">Book a free consult</p>
-        <p class="step-desc">A 20-minute call with your Mental Health Coordinator to understand your needs, concerns, and goals.</p>
+        <p class="step-title">Book a 25 minute consultation</p>
+        <p class="step-desc">A 25-minute video call with a licensed therapist to understand your needs, concerns, and goals.</p>
       </div>
       <div class="step fade-up">
         <div class="step-num" aria-hidden="true">02</div>
@@ -238,8 +238,7 @@ import Layout from '../layouts/Layout.astro';
     <span class="eyebrow eyebrow-dark">A community that gets it. In your inbox.</span>
     <h2>The information you wished your doctor gave you.</h2>
     <p class="nl-sub">Curated insights from leading professionals in women's mental health and hormonal care — delivered weekly.</p>
-    <form class="nl-form" id="nl-form">
-      <input class="nl-input" type="text" name="name" placeholder="Your name" autocomplete="name" required>
+<form class="nl-form" id="nl-form" action="https://formspree.io/f/mdavaqnb" method="POST">      <input class="nl-input" type="text" name="name" placeholder="Your name" autocomplete="name" required>
       <input class="nl-input" type="email" name="email" placeholder="Your email" autocomplete="email" required>
       <button class="nl-btn" type="submit" id="nl-btn">Sign up privately</button>
     </form>
@@ -404,14 +403,5 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-const form = document.getElementById('nl-form');
-if (form) {
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = document.getElementById('nl-btn');
-    btn.textContent = "You're on the list ✓";
-    btn.style.background = '#2A3828';
-    btn.disabled = true;
-  });
-}
+
 </script>

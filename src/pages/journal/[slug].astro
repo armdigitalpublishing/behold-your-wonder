@@ -4,13 +4,21 @@ import Layout from '../../layouts/Layout.astro';
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles');
-  return articles.map((article) => ({
+  const sorted = articles.sort((a, b) =>
+    new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
+  );
+  return sorted.map((article, index) => ({
     params: { slug: article.id },
-    props: { article },
+    props: {
+      article,
+      prev: sorted[index + 1] || null,
+      next: sorted[index - 1] || null,
+      more: sorted.filter((_, i) => i !== index).slice(0, 2),
+    },
   }));
 }
 
-const { article } = Astro.props;
+const { article, prev, next, more } = Astro.props;
 const { Content } = await render(article);
 ---
 
@@ -25,6 +33,35 @@ const { Content } = await render(article);
       <div class="article-content">
         <Content />
       </div>
+      <nav class="article-nav">
+        {prev && (
+          <a href={`/journal/${prev.id}`} class="article-nav-link article-nav-prev">
+            <span class="article-nav-label">← Previous</span>
+            <span class="article-nav-title">{prev.data.title}</span>
+          </a>
+        )}
+        {next && (
+          <a href={`/journal/${next.id}`} class="article-nav-link article-nav-next">
+            <span class="article-nav-label">Next →</span>
+            <span class="article-nav-title">{next.data.title}</span>
+          </a>
+        )}
+      </nav>
+
+      {more.length > 0 && (
+        <div class="more-articles">
+          <h3 class="more-title">More from the journal</h3>
+          <div class="more-grid">
+            {more.map((a) => (
+              <a href={`/journal/${a.id}`} class="more-card">
+                <span class="more-cat">{a.data.category}</span>
+                <p class="more-card-title">{a.data.title}</p>
+                <span class="more-meta">{a.data.readTime} read</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   </article>
 </Layout>
@@ -45,4 +82,83 @@ const { Content } = await render(article);
   :global(.article-content li) { margin-bottom: 8px; font-size: 1.1rem; line-height: 1.8; color: #1E2D1E; }
   :global(.article-content a) { color: #C4917A; text-decoration: underline; text-underline-offset: 3px; }
   :global(.article-content a:hover) { color: #1E2D1E; }
+
+  .article-nav {
+    max-width: 720px;
+    margin: 60px auto 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    padding-top: 40px;
+    border-top: 1px solid #e0d9d0;
+  }
+  .article-nav-link {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-decoration: none;
+    max-width: 45%;
+  }
+  .article-nav-prev { align-items: flex-start; }
+  .article-nav-next { align-items: flex-end; margin-left: auto; }
+  .article-nav-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #C4917A;
+    font-weight: 500;
+  }
+  .article-nav-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: #1E2D1E;
+    line-height: 1.4;
+  }
+  .article-nav-title:hover { text-decoration: underline; }
+  .more-articles {
+    max-width: 720px;
+    margin: 60px auto 0;
+    padding-top: 40px;
+    border-top: 1px solid #e0d9d0;
+  }
+  .more-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: #1E2D1E;
+    margin: 0 0 24px;
+  }
+  .more-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .more-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-decoration: none;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.2s ease;
+  }
+  .more-card:hover { transform: translateY(-3px); }
+  .more-cat {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #C4917A;
+    font-weight: 500;
+  }
+  .more-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: #1E2D1E;
+    line-height: 1.4;
+    margin: 0;
+  }
+  .more-meta {
+    font-size: 0.8rem;
+    color: #999;
+  }
 </style>

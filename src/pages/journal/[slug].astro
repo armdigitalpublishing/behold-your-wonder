@@ -1,0 +1,48 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles');
+  return articles.map((article) => ({
+    params: { slug: article.id },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+---
+
+<Layout title={article.data.title}>
+  <article class="article-body">
+    <div class="container">
+      <div class="article-header">
+        <span class="art-cat">{article.data.category}</span>
+        <h1>{article.data.title}</h1>
+        <p class="article-meta">{article.data.readTime} read</p>
+      </div>
+      <div class="article-content">
+        <Content />
+      </div>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .article-body { padding: 80px 0; background: #F5EFE8; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .article-header { max-width: 720px; margin: 0 auto 60px; text-align: center; }
+  .article-header h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); color: #1E2D1E; margin: 12px 0; }
+  .article-meta { color: #2A3828; font-size: 0.9rem; }
+  .art-cat { font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: #C4917A; }
+  .article-content { max-width: 720px; margin: 0 auto; }
+  :global(.article-content p) { margin-bottom: 24px; font-size: 1.1rem; line-height: 1.8; color: #1E2D1E; }
+  :global(.article-content h2) { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.4rem, 2.5vw, 1.8rem); margin: 60px 0 16px; color: #1E2D1E; }
+  :global(.article-content strong) { color: #1E2D1E; font-weight: 600; }
+  :global(.article-content em) { font-style: italic; color: #1E2D1E; }
+  :global(.article-content ul) { margin-bottom: 24px; padding-left: 24px; }
+  :global(.article-content li) { margin-bottom: 8px; font-size: 1.1rem; line-height: 1.8; color: #1E2D1E; }
+  :global(.article-content a) { color: #C4917A; text-decoration: underline; text-underline-offset: 3px; }
+  :global(.article-content a:hover) { color: #1E2D1E; }
+</style>

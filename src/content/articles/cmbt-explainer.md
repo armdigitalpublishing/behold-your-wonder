@@ -6,6 +6,14 @@ excerpt: "An accessible introduction to CMBT — the integrative modality develo
 publishDate: 2026-06-03
 ---
 
+### Key Takeaways
+
+- **CMBT is a clinic-developed integrative framework** that focuses on identifying and reshaping core internalized messages shaped by early experiences, relationships, and culture.
+- It draws on established psychotherapy traditions with strong evidence: **CBT, psychodynamic theory, EFT, and humanistic psychology**.
+- The model uses four phases — **Discovery, Exploration, Application, and Integration** — to move from insight to lived change.
+- Its language, including terms like **core messages** and **emotional echoes**, is proprietary to BYW and should be understood as a clinical lens, not a standardized diagnosis.
+- **CMBT is presented as a complement to hormonal mental health care**, not a replacement for medical or psychiatric treatment.
+
 Most of us carry messages we did not choose. They arrived early — in the tone of a parent's voice, in the silence that followed a childhood mistake, in the accumulated weight of being told, directly or indirectly, who we were and what we were worth. They were not always spoken. They did not have to be. They became part of the architecture of how we see ourselves.
 
 Core Messaging Based Therapy — CMBT — is a therapeutic approach built around a single premise: that meaningful psychological change often begins when we identify and work with the internalized messages at the root of recurring patterns.

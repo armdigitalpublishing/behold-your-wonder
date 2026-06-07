@@ -6,6 +6,14 @@ excerpt: "When your OBGYN and therapist never speak to each other, you pay the p
 publishDate: 2026-06-04
 ---
 
+### Key Takeaways
+
+- **Fragmented care is the norm** — OBGYNs, therapists, and psychiatrists work in silos, each missing the full picture of hormonal-mood interactions.
+- **Hormonal conditions span specialty boundaries**: PCOS, PMDD, perinatal mood disorders, and perimenopause involve continuous interaction between hormonal, neurological, and psychological systems.
+- **Women face years of misdiagnosis**: PMDD diagnosis takes an average of **20 years** from symptom onset — perimenopausal and PCOS-related mental health gaps are similarly substantial.
+- **Coordinated care requires**: shared clinical frameworks, communication infrastructure, clinicians who understand both hormonal and mental health, and a single front door for access.
+- **The cost is clinical, economic, relational, and personal**: impaired work productivity, lost wages, relationship strain, and loss of trust in the healthcare system.
+
 Here is a scenario that is not exceptional. It is, in fact, routine.
 
 A woman in her late 30s is experiencing significant mood disruption — depression that intensifies in the ten days before her period, anxiety that has no clear psychological origin, sleep disturbances that leave her exhausted regardless of how many hours she spends in bed. She sees her OBGYN, who rules out thyroid dysfunction and notes irregular cycles, and recommends she see a therapist. She sees a therapist, who begins working on her relationship patterns and stress management. She may also see a psychiatrist, who prescribes an antidepressant. Each of these clinicians is competent. None of them is talking to the others. None of them has the full picture.

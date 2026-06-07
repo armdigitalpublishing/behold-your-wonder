@@ -161,4 +161,31 @@ const { Content } = await render(article);
     font-size: 0.8rem;
     color: #999;
   }
+
+  :global(.article-content h3) {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: #1E2D1E;
+    margin: 40px 0 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+  }
+  :global(.article-content h3 + ul) {
+    background: white;
+    border-left: 3px solid #C4917A;
+    border-radius: 0 8px 8px 0;
+    padding: 20px 24px 20px 32px;
+    margin-bottom: 40px;
+  }
+  :global(.article-content h3 + ul li) {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #1E2D1E;
+    margin-bottom: 10px;
+  }
+  :global(.article-content h3 + ul li strong) {
+    color: #1E2D1E;
+    font-weight: 600;
+  }
 </style>

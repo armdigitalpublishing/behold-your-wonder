@@ -6,6 +6,14 @@ excerpt: "Anxiety, rage, and grief that arrives before menopause — what it is 
 publishDate: 2026-06-07
 ---
 
+### Key Takeaways
+
+- **Perimenopause is a neurobiological event**, not a character flaw. Estrogen fluctuations directly affect serotonin, dopamine, and the brain's emotional regulation circuits — the amygdala, prefrontal cortex, and hippocampus.
+- **Depression risk peaks during late perimenopause** — the period of greatest hormonal instability. Women with no prior depression are **2–4x more likely** to experience a first depressive episode during the transition.
+- **Irritability and rage are the most common mood symptoms**, affecting up to **70% of women** — yet rarely discussed as hormonal.
+- **About 4 in 10 women** experience perimenopause-related anxiety — waking with dread, persistent unease without a clear cause.
+- **Treatment works best when biological and psychological are addressed together**: hormone therapy, SSRIs/SNRIs, and CBT, coordinated between mental health and medical providers.
+
 Something shifts before the hot flashes start. Before the irregular periods, before anyone has used the word perimenopause — something changes in how you feel. You wake up anxious for no identifiable reason. You cry in the car. You feel a rage so sudden and so disproportionate to its trigger that it frightens you. You wonder if something is wrong with you.
 
 Nothing is wrong with your character. Something is happening in your brain.

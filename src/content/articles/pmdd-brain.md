@@ -6,6 +6,17 @@ excerpt: "Understanding the luteal phase, estrogen withdrawal, and why your mood
 publishDate: 2026-06-07
 ---
 
+### Key Takeaways
+
+- **PMDD affects 3–8% of women** and is a distinct, biologically based disorder — not "just PMS" or a personality flaw.
+- Symptoms are **triggered by normal hormonal fluctuations** and involve disruptions in **serotonin and GABA** systems, leading to intense mood, anxiety, and irritability in the luteal phase.
+- **Neuroimaging research** shows altered brain function in emotion-regulation circuits including the amygdala and prefrontal cortex.
+- **Diagnosis requires prospective symptom tracking** across at least two menstrual cycles — many women are underdiagnosed or misdiagnosed for years.
+- **First-line treatments** include SSRIs, CBT, and for some, hormonal interventions like specific oral contraceptives.
+- PMDD is associated with **significant functional impairment** and increased risk of suicidal ideation — early diagnosis and multidisciplinary care matter.
+
+
+
 Every month, in the ten to fourteen days before menstruation begins, an estimated **3 to 8 percent** of women experience something that is not adequately described by the word "mood." What they experience is **neurobiological** — rooted in the brain's response to normal hormonal fluctuations, not in imagination. It is measurable in symptom patterns and in brain function, and for most of them, it went undiagnosed for years — not because the science was unclear, but because the medical system was not paying attention.
 
 Premenstrual Dysphoric Disorder (PMDD) is **not** a severe version of PMS. It is a distinct clinical condition in which the brain demonstrates an **abnormal sensitivity** to the hormonal fluctuations of the luteal phase — the second half of your cycle, the two weeks between ovulation and your period. Estrogen and progesterone drop sharply in those final days before menstruation in every woman. In women with PMDD, that drop triggers disruptions in the **serotonergic** and **GABAergic** systems — the brain's serotonin network (governing mood and emotional regulation) and GABA system (the brain's primary calming chemical). The hormones themselves are not abnormal. The brain's response to them is.

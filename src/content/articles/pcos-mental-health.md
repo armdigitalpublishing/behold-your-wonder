@@ -6,6 +6,14 @@ excerpt: "The psychological toll of PCOS is real, measurable, and almost never a
 publishDate: 2026-06-05
 ---
 
+### Key Takeaways
+
+- **PCOS affects 8–13% of women** of reproductive age and is the most common endocrine disorder in this population.
+- **Depression prevalence in PCOS is approximately 31–35%**, and anxiety symptoms are even higher — not just a reaction to chronic illness, but a direct consequence of hormonal and neurochemical disruptions.
+- **Elevated androgens, insulin resistance, menstrual irregularity, and altered cortisol response** all contribute directly to psychological vulnerability.
+- **Symptoms often get misidentified**: depression can look like fatigue and cognitive fog; anxiety can feel like a background hum; body image, self-esteem, and disordered eating are significantly affected.
+- **Coordinated care works best**: a therapist who understands hormonal mechanisms combined with a medical provider who screens for mood, alongside SSRIs, CBT, exercise, and nutritional approaches that address both physical and mental dimensions.
+
 Polycystic ovary syndrome is the most common endocrine disorder affecting women of reproductive age, estimated to affect between 8 and 13 percent of the global population. It is diagnosed primarily through its physical markers — irregular menstrual cycles, elevated androgens — male hormones present in all women but elevated in PCOS — and polycystic ovaries on ultrasound. It is managed primarily through its physical symptoms — cycle regulation, fertility support, metabolic monitoring.
 
 What is almost universally undertreated is what PCOS does to the mind.

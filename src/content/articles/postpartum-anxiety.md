@@ -6,6 +6,14 @@ excerpt: "The racing thoughts, the hypervigilance, the dread — and why it ofte
 publishDate: 2026-06-06
 ---
 
+### Key Takeaways
+
+- **Postpartum anxiety affects more than 1 in 5 new mothers** — making it more common than postpartum depression, yet almost never systematically screened for.
+- **It is not the same as postpartum depression.** Where PPD presents as low mood and disconnection, postpartum anxiety is hyperactivation — racing thoughts, hypervigilance, inability to relax even when the baby is safe.
+- **The Edinburgh Postnatal Depression Scale** — the most widely used postpartum screening tool — was designed to catch depression, not anxiety. Many women with PPA score below the clinical threshold and leave without a referral.
+- **The neurobiological mechanism is real**: rapid postpartum hormonal withdrawal disrupts serotonergic and GABAergic systems, while the maternal brain undergoes functional reorganization that amplifies threat sensitivity.
+- **CBT and SSRIs** are both evidence-based first-line treatments — and coordinated perinatal care that screens for the full spectrum of mood and anxiety disorders produces substantially better outcomes.
+
 You know what postpartum depression is supposed to look like. You have been told to watch for it. You may have been screened for it before you left the hospital. What you were probably not told is that postpartum anxiety is more common than postpartum depression, affects roughly one in five new mothers, and is almost never screened for systematically in the postpartum period.
 
 This is not a minor gap. Postpartum anxiety and postpartum depression are distinct conditions requiring different clinical approaches. Treating one as though it were the other — or missing one entirely because the screening tool only catches the other — leaves women without the care they need during one of the most neurobiologically vulnerable periods of their lives.

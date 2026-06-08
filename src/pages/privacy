@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Privacy Policy" description="Behold Your Wonder Counseling & Consulting, Inc. Privacy Policy.">
+  <section class="legal-hero">
+    <div class="container fade-up">
+      <span class="eyebrow">Legal</span>
+      <h1>Privacy Policy</h1>
+      <p class="page-hero-sub">Effective Date: June 1, 2026</p>
+    </div>
+  </section>
+
+  <section class="legal-body">
+    <div class="container">
+      <div class="legal-content">
+
+        <p>Behold Your Wonder Counseling & Consulting, Inc. ("Company," "we," "our," or "us") respects your privacy and is committed to protecting the personal information you share through this website. This Privacy Policy explains how we collect, use, disclose, and safeguard information when you visit our website.</p>
+
+        <h2>Scope</h2>
+        <p>This Privacy Policy applies to visitors of our website and individuals who interact with us through our services, programs, educational resources, newsletters, consultation requests, workshops, trainings, speaking engagements, publications, digital content, certification programs, and other online offerings.</p>
+        <p>This Privacy Policy does not apply to Protected Health Information collected as part of professional healthcare services. Information related to therapy services is governed by our separate HIPAA Notice.</p>
+
+        <h2>Information We Collect</h2>
+        <p>You may provide information when you:</p>
+        <ul>
+          <li>Complete a contact form</li>
+          <li>Request a consultation</li>
+          <li>Subscribe to a newsletter</li>
+          <li>Download resources</li>
+          <li>Register for workshops, trainings, presentations, certification programs, or events</li>
+          <li>Contact us by email</li>
+          <li>Participate in educational or professional development offerings</li>
+        </ul>
+        <p>Information may include: name, email address, phone number, state of residence, and information submitted in messages or forms.</p>
+
+        <h2>Automatically Collected Information</h2>
+        <p>When you visit our website, certain information may be collected automatically, including IP address, browser type, device information, operating system, pages viewed, website activity, referring website, and approximate geographic location.</p>
+
+        <h2>Cookies and Tracking Technologies</h2>
+        <p>We may use cookies, analytics tools, pixels, and similar technologies to improve website performance and understand visitor engagement. These tools may collect information regarding website traffic, user behavior, session duration, device information, and general location data. You may disable cookies through your browser settings, though some website functionality may be limited.</p>
+
+        <h2>How We Use Information</h2>
+        <p>We may use information to:</p>
+        <ul>
+          <li>Respond to inquiries</li>
+          <li>Schedule consultations</li>
+          <li>Provide requested information</li>
+          <li>Deliver newsletters and updates</li>
+          <li>Register participants for events or trainings</li>
+          <li>Improve website functionality</li>
+          <li>Monitor website performance</li>
+          <li>Maintain security</li>
+          <li>Comply with legal obligations</li>
+        </ul>
+
+        <h2>Email Communications</h2>
+        <p>If you subscribe to communications from us, you may receive newsletters, educational content, announcements, updates, and promotional materials. You may unsubscribe at any time through the unsubscribe link included in emails.</p>
+
+        <h2>Third-Party Services</h2>
+        <p>We may utilize third-party providers to support our operations, including website hosting providers, email marketing platforms, scheduling software, telehealth platforms, client portal providers, analytics services, and payment processors. These providers may process information as necessary to perform services on our behalf.</p>
+
+        <h2>Data Security</h2>
+        <p>We implement reasonable administrative, technical, and physical safeguards designed to protect information collected through the website. However, no electronic transmission or internet-based system can be guaranteed to be completely secure.</p>
+
+        <h2>Children's Privacy</h2>
+        <p>This website is not intended for children under the age of 13. We do not knowingly collect personal information from children through this website.</p>
+
+        <h2>Intellectual Property</h2>
+        <p>All content on this website is protected by applicable intellectual property laws. Behold Your Wonder® and associated logos and branding are proprietary intellectual property owned by Salatha Helton, LMFT. Core Messaging Based Therapy™ (CMBT™) and the Behold Your Wonder Center for Core Messaging Based Therapy™ are proprietary intellectual property developed and owned by Salatha Helton, LMFT and Bryan Anthony Hicks. Additional information regarding intellectual property rights is available in our <a href="/ip-policy">Intellectual Property & Trademark Policy</a>.</p>
+
+        <h2>Your Privacy Rights</h2>
+        <p>Depending upon your state of residence, you may have rights regarding access to, correction of, deletion of, or restriction of certain personal information. Requests regarding privacy rights may be submitted using the contact information below.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>We reserve the right to update this Privacy Policy at any time. Changes will become effective upon posting to this website.</p>
+
+        <h2>Contact</h2>
+        <p><strong>Behold Your Wonder Counseling & Consulting, Inc.</strong><br>
+        Phone: (916) 267-9430<br>
+        Email: admin@beholdyourwonder.health</p>
+
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .legal-hero { background: #1E2D1E; padding: 80px 0; text-align: center; }
+  .legal-hero h1 { color: #F5EFE8; font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); margin: 12px 0; }
+  .page-hero-sub { color: #F5EFE8; opacity: 0.7; font-size: 0.9rem; }
+  .eyebrow { font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: #C4917A; display: block; margin-bottom: 12px; }
+  .legal-body { background: #F5EFE8; padding: 80px 0; }
+  .legal-content { max-width: 720px; margin: 0 auto; font-size: 1.05rem; line-height: 1.8; color: #1E2D1E; }
+  .legal-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: #1E2D1E; margin: 48px 0 16px; }
+  .legal-content p { margin-bottom: 20px; }
+  .legal-content ul { padding-left: 24px; margin-bottom: 20px; }
+  .legal-content li { margin-bottom: 8px; }
+  .legal-content a { color: #C4917A; text-decoration: underline; }
+</style>

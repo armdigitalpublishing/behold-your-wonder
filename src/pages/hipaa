@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="HIPAA Notice" description="Behold Your Wonder Counseling & Consulting, Inc. HIPAA Notice of Privacy Practices.">
+  <section class="legal-hero">
+    <div class="container fade-up">
+      <span class="eyebrow">Legal</span>
+      <h1>HIPAA Notice</h1>
+      <p class="page-hero-sub">Effective Date: June 1, 2026</p>
+    </div>
+  </section>
+
+  <section class="legal-body">
+    <div class="container">
+      <div class="legal-content">
+
+        <p>Behold Your Wonder Counseling & Consulting, Inc. is committed to protecting the privacy and confidentiality of your Protected Health Information ("PHI") in accordance with the Health Insurance Portability and Accountability Act of 1996 ("HIPAA"), applicable federal law, and applicable state laws.</p>
+        <p>This HIPAA Notice explains how your Protected Health Information (PHI) may be used and disclosed, your privacy rights, and how you can access your information. Please review it carefully.</p>
+
+        <h2>Our Responsibilities</h2>
+        <p>We are required by law to:</p>
+        <ul>
+          <li>Maintain the privacy and security of your Protected Health Information</li>
+          <li>Provide you with this HIPAA Notice</li>
+          <li>Follow the terms currently in effect</li>
+          <li>Notify you following a breach involving unsecured Protected Health Information when required by law</li>
+        </ul>
+        <p>We reserve the right to revise this HIPAA Notice. Any changes will apply to all records maintained by the practice and will be available upon request.</p>
+
+        <h2>Scope of This Notice</h2>
+        <p>This HIPAA Notice applies only to information created, received, maintained, or transmitted in connection with professional healthcare services provided by Behold Your Wonder Counseling & Consulting, Inc. Information collected through our website, educational resources, newsletters, workshops, trainings, speaking engagements, publications, consultation requests, certification programs, digital products, or other non-clinical activities is governed by our separate <a href="/privacy">Privacy Policy</a>.</p>
+
+        <h2>How We May Use and Disclose Your Information</h2>
+        <p><strong>Treatment</strong> — Coordinating care, consulting with healthcare providers involved in your care, referrals, and treatment planning.</p>
+        <p><strong>Payment</strong> — Insurance billing, claims processing, and payment collection.</p>
+        <p><strong>Healthcare Operations</strong> — Administrative functions, quality improvement activities, practice management, appointment scheduling and reminders, and professional consultation as permitted by law and professional ethics.</p>
+
+        <h2>Communications</h2>
+        <p>We may communicate with you through telephone, voicemail, secure client portals, secure email, and text messaging when authorized. While reasonable safeguards are used, electronic communications involve certain privacy and security risks.</p>
+
+        <h2>Disclosures Required or Permitted by Law</h2>
+        <p>We may disclose information when required or permitted by law, including:</p>
+        <ul>
+          <li>Suspected abuse or neglect</li>
+          <li>Serious threat to self or others</li>
+          <li>Court orders and lawful subpoenas</li>
+          <li>Public health reporting</li>
+          <li>Workers' compensation matters</li>
+          <li>Law enforcement requests as authorized by law</li>
+          <li>Other legally required disclosures</li>
+        </ul>
+
+        <h2>Uses Requiring Authorization</h2>
+        <p>Certain uses and disclosures require your written authorization, including most disclosures of psychotherapy notes, certain marketing activities, releases outside routine treatment, payment, or healthcare operations, and other uses restricted by HIPAA or state law. You may revoke authorization in writing at any time, except where action has already been taken.</p>
+
+        <h2>Psychotherapy Notes</h2>
+        <p>The Therapist may maintain psychotherapy notes as defined by HIPAA. Psychotherapy notes are maintained separately from the clinical record and receive additional legal protections. Except in limited circumstances permitted or required by law, psychotherapy notes will not be disclosed without your written authorization.</p>
+
+        <h2>Your Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+          <li>Request restrictions on certain uses and disclosures</li>
+          <li>Request confidential communications</li>
+          <li>Inspect and obtain copies of your records, subject to legal limitations</li>
+          <li>Request amendments to your records</li>
+          <li>Receive an accounting of certain disclosures</li>
+          <li>Obtain a paper or electronic copy of this HIPAA Notice</li>
+        </ul>
+        <p>Requests generally must be submitted in writing.</p>
+
+        <h2>Telehealth Services</h2>
+        <p>Telehealth services involve electronic communications and internet-based technologies. Reasonable safeguards are used to protect confidentiality in accordance with HIPAA and applicable state laws; however, no electronic system can be guaranteed completely secure. Clients are encouraged to participate from a private and secure location whenever possible.</p>
+
+        <h2>Questions or Complaints</h2>
+        <p>If you have questions about this HIPAA Notice or believe your privacy rights have been violated, you may contact:</p>
+        <p><strong>Behold Your Wonder Counseling & Consulting, Inc.</strong><br>
+        Phone: (916) 267-9430<br>
+        Email: admin@beholdyourwonder.health</p>
+        <p>You may also file a complaint with the U.S. Department of Health and Human Services Office for Civil Rights. Filing a complaint will not affect your care, and we will not retaliate against you for exercising your rights.</p>
+
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .legal-hero { background: #1E2D1E; padding: 80px 0; text-align: center; }
+  .legal-hero h1 { color: #F5EFE8; font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); margin: 12px 0; }
+  .page-hero-sub { color: #F5EFE8; opacity: 0.7; font-size: 0.9rem; }
+  .eyebrow { font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: #C4917A; display: block; margin-bottom: 12px; }
+  .legal-body { background: #F5EFE8; padding: 80px 0; }
+  .legal-content { max-width: 720px; margin: 0 auto; font-size: 1.05rem; line-height: 1.8; color: #1E2D1E; }
+  .legal-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: #1E2D1E; margin: 48px 0 16px; }
+  .legal-content p { margin-bottom: 20px; }
+  .legal-content ul { padding-left: 24px; margin-bottom: 20px; }
+  .legal-content li { margin-bottom: 8px; }
+  .legal-content a { color: #C4917A; text-decoration: underline; }
+</style>

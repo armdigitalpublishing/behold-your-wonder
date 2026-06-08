@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Terms of Use" description="Behold Your Wonder Counseling & Consulting, Inc. Terms of Use.">
+  <section class="legal-hero">
+    <div class="container fade-up">
+      <span class="eyebrow">Legal</span>
+      <h1>Terms of Use</h1>
+      <p class="page-hero-sub">Effective Date: June 1, 2026</p>
+    </div>
+  </section>
+
+  <section class="legal-body">
+    <div class="container">
+      <div class="legal-content">
+
+        <p>Welcome to the website of Behold Your Wonder Counseling & Consulting, Inc. ("Company," "we," "our," or "us"). By accessing or using this Website, you agree to these Terms of Use. If you do not agree, please discontinue use of the Website.</p>
+
+        <h2>Informational Purposes Only</h2>
+        <p>The content on this Website is provided for educational, informational, and marketing purposes only. Nothing on this Website constitutes medical, psychological, legal, or professional advice, nor does accessing this Website create a therapist-client relationship. Therapeutic services are provided only through a separate informed consent and service agreement.</p>
+
+        <h2>Intellectual Property</h2>
+        <p>All content and materials on this Website are protected by copyright, trademark, trade secret, and other intellectual property laws. Protected materials include, but are not limited to:</p>
+        <ul>
+          <li>Names, trademarks, and service marks</li>
+          <li>Logos and branding elements</li>
+          <li>Website design and graphics</li>
+          <li>Articles and publications</li>
+          <li>Educational resources</li>
+          <li>Videos and recordings</li>
+          <li>Assessments and worksheets</li>
+          <li>Training materials</li>
+          <li>Clinical methodologies</li>
+          <li>Research materials</li>
+          <li>Digital downloads</li>
+        </ul>
+        <p>Ownership of intellectual property is further described in our <a href="/ip-policy">Intellectual Property & Trademark Licensing Policy</a>. No content may be copied, reproduced, distributed, modified, republished, sold, licensed, or otherwise used without prior written authorization from the applicable owner.</p>
+
+        <h2>User Conduct</h2>
+        <p>You agree not to:</p>
+        <ul>
+          <li>Violate applicable laws</li>
+          <li>Infringe upon intellectual property rights</li>
+          <li>Misrepresent affiliation with the Company or its owners</li>
+          <li>Attempt unauthorized access to Website systems</li>
+          <li>Interfere with Website operations</li>
+          <li>Use Website content in a misleading or deceptive manner</li>
+        </ul>
+
+        <h2>Third-Party Links</h2>
+        <p>This Website may contain links to third-party websites. We are not responsible for the content, services, policies, or practices of third parties.</p>
+
+        <h2>Disclaimer</h2>
+        <p>All Website content is provided "as is" without warranties of any kind. We make no guarantees regarding accuracy, completeness, reliability, or suitability for a particular purpose.</p>
+
+        <h2>Limitation of Liability</h2>
+        <p>To the fullest extent permitted by law, Behold Your Wonder Counseling & Consulting, Inc., its officers, employees, contractors, and affiliates shall not be liable for damages arising from use of the Website.</p>
+
+        <h2>Privacy</h2>
+        <p>Your use of this Website is also governed by our <a href="/privacy">Privacy Policy</a>.</p>
+
+        <h2>Changes to Terms</h2>
+        <p>We reserve the right to modify these Terms at any time. Updated versions will be posted with a revised effective date.</p>
+
+        <h2>Contact</h2>
+        <p><strong>Behold Your Wonder Counseling & Consulting, Inc.</strong><br>
+        Email: admin@beholdyourwonder.com<br>
+        <a href="https://www.beholdyourwonder.com">www.beholdyourwonder.com</a></p>
+
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .legal-hero { background: #1E2D1E; padding: 80px 0; text-align: center; }
+  .legal-hero h1 { color: #F5EFE8; font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); margin: 12px 0; }
+  .page-hero-sub { color: #F5EFE8; opacity: 0.7; font-size: 0.9rem; }
+  .eyebrow { font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: #C4917A; display: block; margin-bottom: 12px; }
+  .legal-body { background: #F5EFE8; padding: 80px 0; }
+  .legal-content { max-width: 720px; margin: 0 auto; font-size: 1.05rem; line-height: 1.8; color: #1E2D1E; }
+  .legal-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: #1E2D1E; margin: 48px 0 16px; }
+  .legal-content p { margin-bottom: 20px; }
+  .legal-content ul { padding-left: 24px; margin-bottom: 20px; }
+  .legal-content li { margin-bottom: 8px; }
+  .legal-content a { color: #C4917A; text-decoration: underline; }
+</style>

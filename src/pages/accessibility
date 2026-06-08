@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Accessibility Statement" description="Behold Your Wonder Counseling & Consulting, Inc. Accessibility Statement.">
+  <section class="legal-hero">
+    <div class="container fade-up">
+      <span class="eyebrow">Legal</span>
+      <h1>Accessibility Statement</h1>
+      <p class="page-hero-sub">Effective Date: June 1, 2026</p>
+    </div>
+  </section>
+
+  <section class="legal-body">
+    <div class="container">
+      <div class="legal-content">
+
+        <p>Behold Your Wonder Counseling & Consulting, Inc. is committed to providing an accessible and inclusive experience for all individuals, including those with disabilities.</p>
+
+        <p>We strive to improve the accessibility and usability of our website by following recognized accessibility standards and best practices whenever possible.</p>
+
+        <p>As a telehealth-based practice, we are also committed to reducing barriers to accessing mental health services. Our virtual services allow eligible clients to participate in therapy from the privacy and convenience of their home, subject to licensure requirements and applicable laws.</p>
+
+        <p>If you experience difficulty accessing any content, feature, functionality, form, or resource on this website, or if you require accommodations to access our services, please contact us. We welcome feedback and will make reasonable efforts to improve accessibility whenever possible.</p>
+
+        <h2>Contact Us</h2>
+        <p><strong>Behold Your Wonder Counseling & Consulting, Inc.</strong><br>
+        Phone: (916) 267-9430<br>
+        Email: <a href="mailto:admin@beholdyourwonder.health">admin@beholdyourwonder.health</a></p>
+
+        <p>We are committed to fostering a welcoming, accessible, and inclusive experience for all visitors and clients.</p>
+
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .legal-hero { background: #1E2D1E; padding: 80px 0; text-align: center; }
+  .legal-hero h1 { color: #F5EFE8; font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); margin: 12px 0; }
+  .page-hero-sub { color: #F5EFE8; opacity: 0.7; font-size: 0.9rem; }
+  .eyebrow { font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: #C4917A; display: block; margin-bottom: 12px; }
+  .legal-body { background: #F5EFE8; padding: 80px 0; }
+  .legal-content { max-width: 720px; margin: 0 auto; font-size: 1.05rem; line-height: 1.8; color: #1E2D1E; }
+  .legal-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: #1E2D1E; margin: 48px 0 16px; }
+  .legal-content p { margin-bottom: 20px; }
+  .legal-content a { color: #C4917A; text-decoration: underline; }
+</style>

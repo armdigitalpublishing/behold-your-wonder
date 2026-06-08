@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Disclaimer" description="Behold Your Wonder Counseling & Consulting, Inc. Disclaimer.">
+  <div class="legal-hero">
+    <div class="container">
+      <span style="font-size:0.75rem;font-weight:500;text-transform:uppercase;letter-spacing:0.1em;color:#C4917A;display:block;margin-bottom:12px;">Legal</span>
+      <h1 style="color:#F5EFE8;font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);margin:12px 0;">Disclaimer</h1>
+      <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;">Effective Date: June 1, 2026</p>
+    </div>
+  </div>
+
+  <div class="legal-body">
+    <div class="container">
+      <div class="legal-content">
+
+        <p>The information provided on this website is for informational and educational purposes only and is not intended to constitute medical, psychological, mental health, legal, financial, or professional advice.</p>
+
+        <p>Viewing this website, reading its content, subscribing to communications, downloading resources, completing a contact form, or communicating with Behold Your Wonder Counseling & Consulting, Inc. does not establish a therapist-client relationship.</p>
+
+        <p>Therapy services are provided only after completion of the appropriate intake process, informed consent documents, and establishment of a professional therapeutic relationship.</p>
+
+        <p>Information presented on this website should not be used as a substitute for professional medical, mental health, or healthcare advice, diagnosis, or treatment. Individuals experiencing a medical or mental health emergency should contact 911, their local emergency services, or proceed to the nearest emergency room.</p>
+
+        <p>While we strive to provide accurate and current information, we make no guarantees regarding the completeness, accuracy, reliability, or applicability of any information contained on this website.</p>
+
+        <p>References to external websites, resources, products, services, or organizations are provided for informational purposes only and do not constitute endorsement or recommendation.</p>
+
+        <p>Behold Your Wonder Counseling & Consulting, Inc. disclaims liability for any loss or damages arising from the use of this website or reliance upon its content.</p>
+
+        <h2>Intellectual Property</h2>
+        <p>Behold Your Wonder® and associated logos and branding are owned by Salatha Helton, LMFT.</p>
+        <p>Core Messaging Based Therapy™ (CMBT™) and the Behold Your Wonder Center for Core Messaging Based Therapy™ are proprietary intellectual property developed and owned by Salatha Helton, LMFT and Bryan Anthony Hicks.</p>
+        <p>Unauthorized use, reproduction, distribution, publication, adaptation, licensing, teaching, certification, commercial use, or use for artificial intelligence training purposes is prohibited without written permission.</p>
+
+        <h2>Contact</h2>
+        <p><strong>Behold Your Wonder Counseling & Consulting, Inc.</strong><br>
+        Phone: (916) 267-9430<br>
+        Email: <a href="mailto:admin@beholdyourwonder.health">admin@beholdyourwonder.health</a></p>
+
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .legal-hero { background: #1E2D1E; padding: 80px 0; text-align: center; }
+  .legal-body { background: #F5EFE8; padding: 80px 0; }
+  .legal-content { max-width: 720px; margin: 0 auto; font-size: 1.05rem; line-height: 1.8; color: #1E2D1E; }
+  :global(.legal-content h2) { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: #1E2D1E; margin: 48px 0 16px; }
+  :global(.legal-content p) { margin-bottom: 20px; }
+  :global(.legal-content ul) { padding-left: 24px; margin-bottom: 20px; }
+  :global(.legal-content li) { margin-bottom: 8px; }
+  :global(.legal-content a) { color: #C4917A; text-decoration: underline; }
+</style>

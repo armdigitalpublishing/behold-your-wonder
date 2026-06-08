@@ -3,17 +3,17 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Intellectual Property & Trademark Licensing Policy" description="Behold Your Wonder intellectual property, trademark, and licensing policy.">
-  <section class="ip-hero">
-    <div class="container fade-up">
-      <span class="eyebrow eyebrow-light">Legal</span>
-      <h1>Intellectual Property &<br>Trademark Licensing Policy</h1>
-      <p class="page-hero-sub">Effective date: June 2026</p>
-    </div>
-  </section>
-
-  <section class="ip-body">
+  <div class="legal-hero">
     <div class="container">
-      <div class="ip-content">
+      <span style="font-size:0.75rem;font-weight:500;text-transform:uppercase;letter-spacing:0.1em;color:#C4917A;display:block;margin-bottom:12px;">Legal</span>
+      <h1 style="color:#F5EFE8;font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);margin:12px 0;">Intellectual Property &amp; Trademark Licensing Policy</h1>
+      <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;">Effective Date: June 2026</p>
+    </div>
+  </div>
+
+  <div class="legal-body">
+    <div class="container">
+      <div class="legal-content">
 
         <h2>Ownership of Intellectual Property</h2>
         <p>Behold Your Wonder® and all associated logos, branding, trade dress, and visual identity are the intellectual property of Salatha Helton, LMFT. All rights reserved.</p>
@@ -42,65 +42,21 @@ import Layout from '../layouts/Layout.astro';
         <p>Behold Your Wonder actively monitors for unauthorized use of its intellectual property. If you believe your intellectual property has been infringed upon by content on this site, or if you wish to report unauthorized use of Behold Your Wonder intellectual property, please contact us.</p>
 
         <h2>Contact</h2>
-        <p>For licensing inquiries, trademark questions, or intellectual property concerns, please contact:</p>
         <p><strong>Behold Your Wonder Counseling & Consulting, Inc.</strong><br>
-        legal@beholdyourwonder.com</p>
+        Email: legal@beholdyourwonder.com</p>
 
       </div>
     </div>
-  </section>
+  </div>
 </Layout>
 
 <style>
-  .ip-hero {
-    background: var(--dark-green);
-    padding: var(--space-2xl) 0;
-    text-align: center;
-  }
-  .ip-hero h1 {
-    color: var(--cream);
-    font-size: clamp(2rem, 4vw, 3rem);
-    margin: var(--space-sm) 0;
-  }
-  .page-hero-sub {
-    color: var(--cream);
-    opacity: 0.7;
-    font-size: 0.9rem;
-  }
-  .ip-body {
-    background: var(--cream);
-    padding: var(--space-2xl) 0;
-  }
-  .ip-content {
-    max-width: 720px;
-    margin: 0 auto;
-    font-size: 1.05rem;
-    line-height: 1.8;
-    color: #1E2D1E;
-  }
-  .ip-content h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.6rem;
-    color: #1E2D1E;
-    margin: 48px 0 16px;
-  }
-  .ip-content p {
-    margin-bottom: 20px;
-  }
-  .ip-content ul {
-    padding-left: 24px;
-    margin-bottom: 20px;
-  }
-  .ip-content li {
-    margin-bottom: 8px;
-  }
-  .eyebrow {
-    font-size: 0.75rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #C4917A;
-    display: block;
-    margin-bottom: 12px;
-  }
+  .legal-hero { background: #1E2D1E; padding: 80px 0; text-align: center; }
+  .legal-body { background: #F5EFE8; padding: 80px 0; }
+  .legal-content { max-width: 720px; margin: 0 auto; font-size: 1.05rem; line-height: 1.8; color: #1E2D1E; }
+  :global(.legal-content h2) { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: #1E2D1E; margin: 48px 0 16px; }
+  :global(.legal-content p) { margin-bottom: 20px; }
+  :global(.legal-content ul) { padding-left: 24px; margin-bottom: 20px; }
+  :global(.legal-content li) { margin-bottom: 8px; }
+  :global(.legal-content a) { color: #C4917A; text-decoration: underline; }
 </style>

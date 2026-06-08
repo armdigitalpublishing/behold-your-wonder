@@ -3,15 +3,15 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Terms of Use" description="Behold Your Wonder Counseling & Consulting, Inc. Terms of Use.">
-  <section class="legal-hero">
-    <div class="container fade-up">
-      <span class="eyebrow">Legal</span>
-      <h1>Terms of Use</h1>
-      <p class="page-hero-sub">Effective Date: June 1, 2026</p>
+  <div class="legal-hero">
+    <div class="container">
+      <span style="font-size:0.75rem;font-weight:500;text-transform:uppercase;letter-spacing:0.1em;color:#C4917A;display:block;margin-bottom:12px;">Legal</span>
+      <h1 style="color:#F5EFE8;font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);margin:12px 0;">Terms of Use</h1>
+      <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;">Effective Date: June 1, 2026</p>
     </div>
-  </section>
+  </div>
 
-  <section class="legal-body">
+  <div class="legal-body">
     <div class="container">
       <div class="legal-content">
 
@@ -70,19 +70,16 @@ import Layout from '../layouts/Layout.astro';
 
       </div>
     </div>
-  </section>
+  </div>
 </Layout>
 
 <style>
   .legal-hero { background: #1E2D1E; padding: 80px 0; text-align: center; }
-  .legal-hero h1 { color: #F5EFE8; font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); margin: 12px 0; }
-  .page-hero-sub { color: #F5EFE8; opacity: 0.7; font-size: 0.9rem; }
-  .eyebrow { font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: #C4917A; display: block; margin-bottom: 12px; }
   .legal-body { background: #F5EFE8; padding: 80px 0; }
   .legal-content { max-width: 720px; margin: 0 auto; font-size: 1.05rem; line-height: 1.8; color: #1E2D1E; }
-  .legal-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: #1E2D1E; margin: 48px 0 16px; }
-  .legal-content p { margin-bottom: 20px; }
-  .legal-content ul { padding-left: 24px; margin-bottom: 20px; }
-  .legal-content li { margin-bottom: 8px; }
-  .legal-content a { color: #C4917A; text-decoration: underline; }
+  :global(.legal-content h2) { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: #1E2D1E; margin: 48px 0 16px; }
+  :global(.legal-content p) { margin-bottom: 20px; }
+  :global(.legal-content ul) { padding-left: 24px; margin-bottom: 20px; }
+  :global(.legal-content li) { margin-bottom: 8px; }
+  :global(.legal-content a) { color: #C4917A; text-decoration: underline; }
 </style>

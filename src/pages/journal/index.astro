@@ -3,55 +3,81 @@ import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 
 const articles = await getCollection('articles');
-const sorted = articles.sort((a, b) => 
+const sorted = articles.sort((a, b) =>
   new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
 );
+
+const categoryColors: Record<string, string> = {
+  'Hormonal Health': 'hormonal',
+  'Mental Wellness': 'mental',
+  'Clinical Insights': 'clinical',
+  'Perinatal': 'perinatal',
+};
 ---
 
 <Layout title="Journal">
-  <section class="journal-hero">
-    <div class="container">
-      <span class="eyebrow">From our journal</span>
-      <h1>Articles written for real women — not search engines.</h1>
-      <p class="hero-sub">Clinical insights on hormonal health, mental wellness, and the conditions your provider may have missed.</p>
-    </div>
-  </section>
-  <section class="journal-grid">
-    <div class="container">
-      <div class="art-grid">
-        {sorted.map((article) => (
+
+<section class="page-hero">
+  <div class="container fade-up">
+    <span class="eyebrow eyebrow-light">From our journal</span>
+    <h1>Articles written for real women —<br>not search engines.</h1>
+    <p class="page-hero-sub">Clinical insights on hormonal health, mental wellness, and the conditions your provider may have missed.</p>
+  </div>
+</section>
+
+<section class="journal-grid">
+  <div class="container">
+    <div class="art-grid">
+      {sorted.map((article) => {
+        const colorClass = categoryColors[article.data.category] || 'clinical';
+        return (
           <a href={`/journal/${article.id}`} class="art-card">
-            <div class="art-img">
-              <p class="art-img-label">{article.data.category}</p>
-            </div>
+            <div class={`art-top ${colorClass}`}></div>
             <div class="art-body">
-              <span class="art-cat">{article.data.category}</span>
+              <span class={`art-cat cat-${colorClass}`}>{article.data.category}</span>
               <p class="art-title">{article.data.title}</p>
               <p class="art-excerpt">{article.data.excerpt}</p>
               <div class="art-meta">{article.data.readTime} read</div>
             </div>
           </a>
-        ))}
-      </div>
+        );
+      })}
     </div>
-  </section>
+  </div>
+</section>
+
 </Layout>
 
 <style>
-  .journal-hero { background: #1E2D1E; padding: 80px 0; text-align: center; }
-  .journal-hero h1 { color: #F5EFE8; font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3.5rem); margin: 12px 0; }
-  .hero-sub { color: #F5EFE8; opacity: 0.8; max-width: 600px; margin: 0 auto; font-size: 1.1rem; line-height: 1.6; }
-  .eyebrow { font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: #C4917A; display: block; margin-bottom: 12px; }
-  .journal-grid { background: #F5EFE8; padding: 80px 0; }
-  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-  .art-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 32px; }
-  .art-card { background: white; border-radius: 12px; overflow: hidden; text-decoration: none; display: block; transition: transform 0.2s ease; }
-  .art-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(30,45,30,0.12); }
-  .art-img { height: 160px; background: #2A3828; display: flex; align-items: flex-end; padding: 16px; }
-  .art-img-label { color: #F5EFE8; opacity: 0.7; font-size: 0.75rem; text-transform: uppercase; margin: 0; }
-  .art-body { padding: 24px; }
-  .art-cat { font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: #C4917A; }
-  .art-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: #1E2D1E; margin: 8px 0; line-height: 1.4; }
-  .art-excerpt { font-size: 0.9rem; color: #666; line-height: 1.6; margin-bottom: 16px; }
-  .art-meta { font-size: 0.8rem; color: #999; }
+.page-hero{background:var(--ink);padding:clamp(64px,10vw,110px) 0;text-align:center}
+.page-hero h1{color:#fff;margin-bottom:18px}
+.page-hero-sub{font-size:clamp(14px,1.8vw,16px);color:rgba(255,255,255,0.6);line-height:1.75;max-width:600px;margin:0 auto}
+
+.journal-grid{background:var(--cream);padding:var(--pad) 0}
+.art-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:clamp(14px,2vw,24px)}
+.art-card{background:#fff;border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:border-color 0.2s,transform 0.2s;display:block;color:inherit}
+.art-card:hover{border-color:var(--gold);transform:translateY(-3px)}
+.art-top{height:4px}
+.art-top.hormonal{background:var(--gold)}
+.art-top.mental{background:var(--ink)}
+.art-top.clinical{background:var(--green)}
+.art-top.perinatal{background:var(--blush)}
+.art-body{padding:24px}
+.art-cat{display:inline-block;font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:4px 10px;border-radius:4px;margin-bottom:12px}
+.cat-hormonal{background:rgba(245,184,0,0.12);color:var(--gold-dk)}
+.cat-mental{background:rgba(30,30,30,0.06);color:var(--ink-soft)}
+.cat-clinical{background:rgba(125,217,138,0.15);color:#2E7D5E}
+.cat-perinatal{background:rgba(247,138,138,0.12);color:#C05050}
+.art-title{font-family:var(--serif);font-size:clamp(17px,2vw,21px);color:var(--ink);line-height:1.35;margin-bottom:8px;font-weight:400}
+.art-excerpt{font-size:13px;color:var(--ink-soft);line-height:1.7;margin-bottom:14px}
+.art-meta{font-size:11px;color:#AAA;font-weight:500}
+
+@media(max-width:600px){.art-grid{grid-template-columns:1fr}}
 </style>
+
+<script>
+const observer = new IntersectionObserver(e => {
+  e.forEach(t => { if(t.isIntersecting){ t.target.classList.add('visible'); observer.unobserve(t.target); }});
+}, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>

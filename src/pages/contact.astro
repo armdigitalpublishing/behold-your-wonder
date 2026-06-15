@@ -18,11 +18,10 @@ import Layout from '../layouts/Layout.astro';
       <div class="consult-info fade-up">
         <span class="eyebrow eyebrow-dark">Getting support is easy.</span>
         <h2>Book a consultation</h2>
-        <p>Your 25-minute session with our specialized director — a focused, professional conversation about what you're navigating and whether BYW is the right fit for you.
-</p>
+        <p>Your 25-minute session with our specialized director — a focused, professional conversation about what you're navigating and whether BYW is the right fit for you.</p>
         <div class="consult-steps">
           <div class="consult-step"><div class="step-num">1</div><p class="step-text"><strong>Book online</strong> — schedule your 25-minute consultation through our secure booking portal.</p></div>
-          <div class="consult-step"><div class="step-num">2</div><p class="step-text"><strong>Meet with our specialized director of hormonal mental health</strong> — a dedicated session to understand your needs, answer your questions, and assess the right care path for you.</p></div>
+          <div class="consult-step"><div class="step-num">2</div><p class="step-text"><strong>Meet with our specialized director</strong> — a dedicated session to understand your needs, answer your questions, and assess the right care path for you.</p></div>
           <div class="consult-step"><div class="step-num">3</div><p class="step-text"><strong>Get matched</strong> — if BYW is right for you, we'll match you with one of our natively trained therapists and get you scheduled.</p></div>
         </div>
         <p class="consult-note">All consultations are confidential. There is no obligation to continue after your initial call.</p>
@@ -31,7 +30,6 @@ import Layout from '../layouts/Layout.astro';
         <div class="consult-cta-block">
           <h3>Book your 25-minute consult</h3>
           <p>Select a time that works for you. We'll send a confirmation with everything you need to know before your call.</p>
-          <!-- REPLACE href WITH YOUR SIMPLEPRACTICE BOOKING LINK -->
           <a href="https://beholdyourwonder.clientsecure.me" class="btn-book" target="_blank" rel="noopener">Schedule now →</a>
           <p class="book-note">$65 · 25 minutes · Professional Consultation</p>
           <div class="response-strip">
@@ -62,7 +60,7 @@ import Layout from '../layouts/Layout.astro';
             </select>
           </div>
           <div class="form-field"><label class="form-label" for="message">Your message</label><textarea class="form-textarea" id="message" name="message" placeholder="What would you like to know?" required></textarea></div>
-          <button class="form-submit" type="submit" id="general-btn">Send message</button>
+          <button class="form-submit" type="submit">Send message</button>
           <p class="form-privacy">Your information is kept confidential and never shared.</p>
         </form>
       </div>
@@ -91,7 +89,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <div class="form-field"><label class="form-label" for="c-license">License number & state</label><input class="form-input" type="text" id="c-license" name="license" placeholder="e.g. LMFT12345 — California"></div>
           <div class="form-field"><label class="form-label" for="c-message">Tell us about your practice</label><textarea class="form-textarea" id="c-message" name="message" placeholder="Your specialty, experience with hormonal health, and why you're interested in BYW..." required></textarea></div>
-          <button class="form-submit" type="submit" id="clinician-btn">Submit inquiry</button>
+          <button class="form-submit" type="submit">Submit inquiry</button>
           <p class="form-privacy">All applications are reviewed by our clinical team.</p>
         </form>
       </div>
@@ -104,12 +102,11 @@ import Layout from '../layouts/Layout.astro';
     <div class="states-head fade-up">
       <span class="eyebrow eyebrow-dark">Availability</span>
       <h2>States we currently serve</h2>
-      <p>Our licensed coverage is active in
-California, Arizona, Nevada, and Colorado </p>
+      <p>Our licensed coverage is active in California, Arizona, Nevada, and Colorado.</p>
     </div>
     <div class="states-note fade-up">
-      <p>For individual therapy, services must be provided in the state where you are physically located at the time of your session. We are working to bring BYW to more women across the country and will continue to grow our reach.</p>
-      <p>Not in one of those states? Our async clinical support and educational workshops are available to women everywhere — no location restrictions. You can access our between-session messaging support and attend our online workshops regardless of where you live.</p>
+      <p>For individual therapy, services must be provided in the state where you are physically located at the time of your session. We are working to bring BYW to more women across the country.</p>
+      <p>Not in one of those states? Our async clinical support and educational workshops are available to women everywhere — no location restrictions.</p>
     </div>
   </div>
 </section>
@@ -120,10 +117,10 @@ California, Arizona, Nevada, and Colorado </p>
       <h3>If you are in crisis</h3>
       <p>Behold Your Wonder is not a crisis service. If you are experiencing a mental health emergency or are in immediate danger, please contact emergency services or one of the resources below.</p>
       <div class="crisis-numbers">
-       <a href="tel:988" class="crisis-number"><p class="crisis-name">988 Suicide & Crisis Lifeline</p><p class="crisis-num">Call or text 988</p></a>
-<a href="sms:741741" class="crisis-number"><p class="crisis-name">Crisis Text Line</p><p class="crisis-num">Text HOME to 741741</p></a>
-<a href="tel:911" class="crisis-number"><p class="crisis-name">Emergency Services</p><p class="crisis-num">Call 911</p></a>
-<a href="tel:18009444773" class="crisis-number"><p class="crisis-name">Postpartum Support Intl</p><p class="crisis-num">1-800-944-4773</p></a>
+        <a href="tel:988" class="crisis-number"><p class="crisis-name">988 Suicide & Crisis Lifeline</p><p class="crisis-num">Call or text 988</p></a>
+        <a href="sms:741741" class="crisis-number"><p class="crisis-name">Crisis Text Line</p><p class="crisis-num">Text HOME to 741741</p></a>
+        <a href="tel:911" class="crisis-number"><p class="crisis-name">Emergency Services</p><p class="crisis-num">Call 911</p></a>
+        <a href="tel:18009444773" class="crisis-number"><p class="crisis-name">Postpartum Support Intl</p><p class="crisis-num">1-800-944-4773</p></a>
       </div>
     </div>
   </div>
@@ -132,64 +129,67 @@ California, Arizona, Nevada, and Colorado </p>
 </Layout>
 
 <style>
-.page-hero{background:var(--green-mid);padding:clamp(64px,10vw,110px) 0;text-align:center}
+.page-hero{background:var(--ink);padding:clamp(64px,10vw,110px) 0;text-align:center}
 .page-hero h1{color:#fff;margin-bottom:18px}
 .page-hero-sub{font-size:clamp(14px,1.8vw,16px);color:rgba(255,255,255,0.6);line-height:1.75;max-width:520px;margin:0 auto}
+
 .consult{background:var(--cream);padding:var(--pad) 0}
 .consult-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:start}
-.consult-info h2{color:var(--green-dark);margin-bottom:16px}
-.consult-info p{font-size:clamp(13px,1.5vw,15px);color:#5A4A40;line-height:1.85;margin-bottom:24px}
+.consult-info h2{color:var(--ink);margin-bottom:16px}
+.consult-info p{font-size:clamp(13px,1.5vw,15px);color:var(--ink-soft);line-height:1.85;margin-bottom:24px}
 .consult-steps{display:flex;flex-direction:column;gap:16px;margin-bottom:32px}
 .consult-step{display:flex;gap:16px;align-items:flex-start}
-.step-num{width:28px;height:28px;border-radius:50%;background:var(--rose-light);border:0.5px solid rgba(196,145,122,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;font-weight:500;color:var(--rose)}
-.step-text{font-size:clamp(13px,1.4vw,14px);color:#5A4A40;line-height:1.65;padding-top:4px}
-.step-text strong{color:var(--green-dark);font-weight:500}
-.consult-note{font-size:12px;color:#9A8A80;line-height:1.6;border-left:2px solid rgba(196,145,122,0.3);padding-left:14px}
-.consult-cta-block{background:var(--green-dark);border-radius:var(--radius-lg);padding:clamp(28px,4vw,44px)}
+.step-num{width:28px;height:28px;border-radius:50%;background:rgba(245,184,0,0.15);border:0.5px solid rgba(245,184,0,0.4);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;font-weight:600;color:var(--gold-dk)}
+.step-text{font-size:clamp(13px,1.4vw,14px);color:var(--ink-soft);line-height:1.65;padding-top:4px}
+.step-text strong{color:var(--ink);font-weight:600}
+.consult-note{font-size:12px;color:var(--ink-soft);line-height:1.6;border-left:2px solid rgba(245,184,0,0.4);padding-left:14px}
+
+.consult-cta-block{background:var(--ink);border-radius:var(--radius-lg);padding:clamp(28px,4vw,44px)}
 .consult-cta-block h3{color:#fff;margin-bottom:12px}
 .consult-cta-block p{font-size:clamp(13px,1.4vw,14px);color:rgba(255,255,255,0.55);line-height:1.75;margin-bottom:24px}
-.btn-book{display:block;background:var(--rose);color:#fff;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:16px 28px;border-radius:var(--radius-pill);text-align:center;transition:opacity 0.2s;margin-bottom:12px}
+.btn-book{display:block;background:var(--gold);color:var(--ink);font-size:13px;font-weight:600;padding:16px 28px;border-radius:var(--radius-pill);text-align:center;transition:opacity 0.2s;margin-bottom:12px}
 .btn-book:hover{opacity:0.88}
 .book-note{font-size:11px;color:rgba(255,255,255,0.3);text-align:center;line-height:1.6}
 .response-strip{background:rgba(255,255,255,0.05);border-radius:var(--radius-md);border:0.5px solid rgba(255,255,255,0.08);padding:14px 18px;display:flex;align-items:center;gap:12px;margin-top:16px}
-.response-dot{width:7px;height:7px;border-radius:50%;background:#6DBF8A;flex-shrink:0}
+.response-dot{width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0}
 .response-text{font-size:12px;color:rgba(255,255,255,0.5);line-height:1.5}
-.inquiry{background:var(--green-mid);padding:var(--pad) 0}
+
+.inquiry{background:var(--ink);padding:var(--pad) 0}
 .inquiry-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px)}
 .inquiry-grid h3{color:#fff;margin-bottom:10px}
-.inquiry-grid p{font-size:clamp(12px,1.4vw,14px);color:rgba(255,255,255,0.52);line-height:1.75;margin-bottom:24px}
+.inquiry-grid p{font-size:clamp(12px,1.4vw,14px);color:rgba(255,255,255,0.5);line-height:1.75;margin-bottom:24px}
 .form-field{margin-bottom:18px}
-.form-label{font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.4);display:block;margin-bottom:8px}
+.form-label{font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.4);display:block;margin-bottom:8px}
 .form-input,.form-textarea,.form-select{width:100%;background:rgba(255,255,255,0.06);border:0.5px solid rgba(255,255,255,0.12);border-radius:var(--radius-sm);padding:12px 14px;font-size:14px;font-family:'DM Sans',sans-serif;color:#fff;outline:none;transition:border-color 0.2s}
 .form-input::placeholder,.form-textarea::placeholder{color:rgba(255,255,255,0.25)}
-.form-input:focus,.form-textarea:focus,.form-select:focus{border-color:rgba(196,145,122,0.6)}
+.form-input:focus,.form-textarea:focus,.form-select:focus{border-color:rgba(245,184,0,0.5)}
 .form-textarea{resize:vertical;min-height:120px}
 .form-select{color:rgba(255,255,255,0.6);cursor:pointer}
-.form-select option{background:var(--green-mid);color:#fff}
-.form-submit{background:var(--rose);color:#fff;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:14px 28px;border-radius:var(--radius-pill);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;transition:opacity 0.2s;width:100%}
+.form-select option{background:var(--ink);color:#fff}
+.form-submit{background:var(--gold);color:var(--ink);font-size:13px;font-weight:600;padding:14px 28px;border-radius:var(--radius-pill);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;transition:opacity 0.2s;width:100%}
 .form-submit:hover{opacity:0.88}
 .form-privacy{font-size:11px;color:rgba(255,255,255,0.25);text-align:center;margin-top:10px;line-height:1.6}
+
 .states{background:var(--cream);padding:var(--pad) 0}
 .states-head{text-align:center;margin-bottom:clamp(32px,4vw,48px)}
-.states-head h2{color:var(--green-dark)}
-.states-head p{font-size:clamp(13px,1.5vw,15px);color:#5A4A40;margin-top:12px;line-height:1.7;max-width:520px;margin-left:auto;margin-right:auto}
-.states-note{background:#fff;border:0.5px solid rgba(30,45,30,0.1);border-radius:var(--radius-lg);padding:clamp(28px,4vw,44px);max-width:680px;margin:0 auto;text-align:center}
-.states-note p{font-size:clamp(13px,1.5vw,15px);color:#5A4A40;line-height:1.8;margin-bottom:12px}
+.states-head h2{color:var(--ink)}
+.states-head p{font-size:clamp(13px,1.5vw,15px);color:var(--ink-soft);margin-top:12px;line-height:1.7;max-width:520px;margin-left:auto;margin-right:auto}
+.states-note{background:#fff;border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:clamp(28px,4vw,44px);max-width:680px;margin:0 auto;text-align:center}
+.states-note p{font-size:clamp(13px,1.5vw,15px);color:var(--ink-soft);line-height:1.8;margin-bottom:12px}
 .states-note p:last-child{margin-bottom:0}
-.crisis{background:var(--green-dark);padding:clamp(40px,5vw,64px) 0}
+
+.crisis{background:var(--ink);padding:clamp(40px,5vw,64px) 0}
 .crisis-inner{max-width:680px;margin:0 auto;text-align:center}
 .crisis-inner h3{color:#fff;margin-bottom:12px}
 .crisis-inner p{font-size:clamp(13px,1.5vw,14px);color:rgba(255,255,255,0.5);line-height:1.8;margin-bottom:20px}
 .crisis-numbers{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:680px;margin:0 auto}
-.crisis-number{background:rgba(255,255,255,0.06);border:0.5px solid rgba(255,255,255,0.1);border-radius:var(--radius-md);padding:14px 20px;text-align:center}
+.crisis-number{background:rgba(255,255,255,0.05);border:0.5px solid rgba(255,255,255,0.1);border-radius:var(--radius-md);padding:14px 20px;text-align:center;transition:background 0.2s;cursor:pointer}
+.crisis-number:hover{background:rgba(255,255,255,0.09)}
 .crisis-name{font-size:12px;font-weight:500;color:#fff;margin-bottom:3px}
-.crisis-num{font-size:13px;color:var(--rose)}
+.crisis-num{font-size:13px;color:var(--gold)}
+
 @media(max-width:900px){.consult-grid,.inquiry-grid{grid-template-columns:1fr}}
-@media(max-width:600px){.crisis-numbers{flex-direction:column;align-items:center}}
-
-a.crisis-number{cursor:pointer;transition:background 0.2s}
-a.crisis-number:hover{background:rgba(255,255,255,0.1)}
-
+@media(max-width:600px){.crisis-numbers{grid-template-columns:1fr}}
 </style>
 
 <script>
@@ -197,5 +197,4 @@ const observer = new IntersectionObserver(e => {
   e.forEach(t => { if(t.isIntersecting){ t.target.classList.add('visible'); observer.unobserve(t.target); }});
 }, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
 </script>

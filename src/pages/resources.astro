@@ -19,7 +19,8 @@ import Layout from '../layouts/Layout.astro';
       <h2>Articles written for real women —<br>not search engines.</h2>
     </div>
     <div class="art-grid">
-      <a href="/journal/pmdd-brain" class="art-card hormonal-bar fade-up">
+      <a href="/journal/pmdd-brain" class="art-card fade-up">
+        <div class="art-top hormonal"></div>
         <div class="art-body">
           <span class="art-cat cat-hormonal">Hormonal health</span>
           <p class="art-title">What PMDD actually does to your brain — and why it's not in your head</p>
@@ -27,7 +28,8 @@ import Layout from '../layouts/Layout.astro';
           <div class="art-meta">6 min read</div>
         </div>
       </a>
-      <a href="/journal/perimenopause-emotional-weight" class="art-card mental-bar fade-up">
+      <a href="/journal/perimenopause-emotional-weight" class="art-card fade-up">
+        <div class="art-top mental"></div>
         <div class="art-body">
           <span class="art-cat cat-mental">Mental wellness</span>
           <p class="art-title">The emotional weight of perimenopause nobody talks about</p>
@@ -35,7 +37,8 @@ import Layout from '../layouts/Layout.astro';
           <div class="art-meta">8 min read</div>
         </div>
       </a>
-      <a href="/journal/fragmented-care" class="art-card clinical-bar fade-up">
+      <a href="/journal/fragmented-care" class="art-card fade-up">
+        <div class="art-top clinical"></div>
         <div class="art-body">
           <span class="art-cat cat-clinical">Clinical insights</span>
           <p class="art-title">Why fragmented care fails women with hormonal conditions</p>
@@ -43,7 +46,8 @@ import Layout from '../layouts/Layout.astro';
           <div class="art-meta">5 min read</div>
         </div>
       </a>
-      <a href="/journal/postpartum-anxiety" class="art-card perinatal-bar fade-up">
+      <a href="/journal/postpartum-anxiety" class="art-card fade-up">
+        <div class="art-top perinatal"></div>
         <div class="art-body">
           <span class="art-cat cat-perinatal">Perinatal</span>
           <p class="art-title">Postpartum anxiety is not the same as postpartum depression</p>
@@ -51,7 +55,8 @@ import Layout from '../layouts/Layout.astro';
           <div class="art-meta">7 min read</div>
         </div>
       </a>
-      <a href="/journal/pcos-mental-health" class="art-card hormonal-bar fade-up">
+      <a href="/journal/pcos-mental-health" class="art-card fade-up">
+        <div class="art-top hormonal"></div>
         <div class="art-body">
           <span class="art-cat cat-hormonal">Hormonal health</span>
           <p class="art-title">PCOS and mental health — the connection your provider may have missed</p>
@@ -59,7 +64,8 @@ import Layout from '../layouts/Layout.astro';
           <div class="art-meta">9 min read</div>
         </div>
       </a>
-      <a href="/journal/cmbt-explainer" class="art-card clinical-bar fade-up">
+      <a href="/journal/cmbt-explainer" class="art-card fade-up">
+        <div class="art-top clinical"></div>
         <div class="art-body">
           <span class="art-cat cat-clinical">Clinical insights</span>
           <p class="art-title">What is Core Messaging Based Therapy and how does it work?</p>
@@ -84,7 +90,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div class="faq-item">
         <button class="faq-q" type="button"><span class="faq-q-text">Which states do you serve?</span><div class="faq-icon"><span>+</span></div></button>
-        <div class="faq-a"><p class="faq-a-inner">Telehealth 1:1 therapy services may only be provided in the state where you are physically located at the time of your session. We currently serve clients in California, Arizona, Nevada, and Colorado. All other services offered by our practice do not constitute therapy, are not mental health treatment, and are not restricted by state licensure requirements.</p>
+        <div class="faq-a"><p class="faq-a-inner">Telehealth 1:1 therapy services may only be provided in the state where you are physically located at the time of your session. We currently serve clients in California, Arizona, Nevada, and Colorado. All other services offered by our practice do not constitute therapy, are not mental health treatment, and are not restricted by state licensure requirements.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" type="button"><span class="faq-q-text">How is this different from regular therapy?</span><div class="faq-icon"><span>+</span></div></button>
@@ -100,7 +106,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div class="faq-item">
         <button class="faq-q" type="button"><span class="faq-q-text">How do I get started?</span><div class="faq-icon"><span>+</span></div></button>
-        <div class="faq-a"><p class="faq-a-inner">Begin with a 25-minute consultation with a licensed therapist for $50. This dedicated time allows us to discuss what brings you to therapy, answer your questions, explore your goals, and determine whether Behold Your Wonder is the right fit for your needs. If appropriate, we will review next steps.</p></div>
+        <div class="faq-a"><p class="faq-a-inner">Begin with a 25-minute consultation with a licensed therapist for $65. This dedicated time allows us to discuss what brings you to therapy, answer your questions, explore your goals, and determine whether Behold Your Wonder is the right fit for your needs.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" type="button"><span class="faq-q-text">Is everything confidential and HIPAA compliant?</span><div class="faq-icon"><span>+</span></div></button>
@@ -114,56 +120,26 @@ import Layout from '../layouts/Layout.astro';
   </div>
 </section>
 
-<section class="glossary">
-  <div class="container">
-    <div class="section-head fade-up">
-      <span class="eyebrow eyebrow-dark">Plain-language glossary</span>
-      <h2>Terms you may encounter<br>in your care</h2>
-    </div>
-    <div class="glossary-grid fade-up">
-      <div class="glossary-card"><p class="glossary-term">PMDD</p><p class="glossary-def">Premenstrual Dysphoric Disorder. A severe form of PMS in which hormonal changes during the luteal phase cause significant mood disturbance, anxiety, depression, or irritability. A recognized clinical condition — not "just PMS."</p></div>
-      <div class="glossary-card"><p class="glossary-term">Perimenopause</p><p class="glossary-def">The transition period leading up to menopause, typically beginning in the 40s, during which estrogen and progesterone levels fluctuate significantly. Can cause mood changes, anxiety, sleep disturbance, and cognitive shifts years before menstruation stops.</p></div>
-      <div class="glossary-card"><p class="glossary-term">Perinatal mental health</p><p class="glossary-def">Mental health conditions that arise during pregnancy or in the postpartum period, including postpartum depression, postpartum anxiety, and birth-related PTSD. Affects up to 1 in 5 women and is significantly underdiagnosed.</p></div>
-      <div class="glossary-card"><p class="glossary-term">PCOS</p><p class="glossary-def">Polycystic Ovary Syndrome. A hormonal condition affecting the ovaries that can cause irregular periods and elevated androgens. PCOS has significant mental health implications, including elevated rates of anxiety and depression.</p></div>
-      <div class="glossary-card"><p class="glossary-term">Luteal phase</p><p class="glossary-def">The second half of the menstrual cycle, between ovulation and menstruation. For women with PMDD, this phase is associated with significant emotional and physiological symptoms.</p></div>
-      <div class="glossary-card"><p class="glossary-term">PMHNP</p><p class="glossary-def">Psychiatric Mental Health Nurse Practitioner. An advanced practice nurse specializing in mental health who can diagnose conditions and prescribe medication. Part of our specialist partner network.</p></div>
-      <div class="glossary-card"><p class="glossary-term">Telehealth</p><p class="glossary-def">Healthcare services delivered remotely via secure video or messaging platforms. All Behold Your Wonder services are delivered via HIPAA-compliant telehealth technology.</p></div>
-      <div class="glossary-card"><p class="glossary-term">Fertility grief</p><p class="glossary-def">The complex emotional experience of loss and grief associated with fertility challenges, including failed IVF cycles, miscarriage, pregnancy loss, or the recognition that biological parenthood may not be possible.</p></div>
-    </div>
-  </div>
-</section>
-
 <section class="downloads">
   <div class="container">
-    <div class="section-head fade-up">
-      <span class="eyebrow eyebrow-dark">Free resources</span>
-<h2 style="color:#fff;">Tools to support your journey</h2>    </div>
-    <div class="downloads-grid fade-up">
-      <div class="download-card">
-        <div class="download-icon">↓</div>
-        <p class="download-title">How Hormones Can Correlate</p>
-        <p class="download-desc">Understanding the connection between hormones, emotions, and patterns across your cycle.</p>
-       <a href="/CMBT%20-%20how%20hormones%20correlate.pdf" download class="download-btn">Download</a>
-      </div>
-      <div class="download-card">
-        <div class="download-icon">↓</div>
-        <p class="download-title">Emotional Echo Identification Guide</p>
-        <p class="download-desc">A CMBT guide to identifying what your emotional echoes are trying to tell you.</p>
-        <a href="/Emotional Echoes Identification.pdf" download class="download-btn">Download</a>
-      </div>
-      <div class="download-card">
+    <div class="downloads-head fade-up">
+      <span class="eyebrow eyebrow-light">Free resources</span>
+      <h2>Tools to help you understand<br>your experience</h2>
+    </div>
+    <div class="downloads-grid">
+      <div class="download-card fade-up">
         <div class="download-icon">↓</div>
         <p class="download-title">Could Hormonal Changes Be Affecting My Mental Health?</p>
         <p class="download-desc">A self-assessment and reflection checklist for perimenopause and menopause.</p>
         <a href="/Hormonal Changes.pdf" download class="download-btn">Download</a>
       </div>
-      <div class="download-card">
+      <div class="download-card fade-up">
         <div class="download-icon">↓</div>
         <p class="download-title">Preparing for Your Hormonal Health Appointment</p>
         <p class="download-desc">Questions to discuss with your healthcare provider to ensure your concerns are fully explored.</p>
         <a href="/Preparing Hormonal Health.pdf" download class="download-btn">Download</a>
       </div>
-      <div class="download-card">
+      <div class="download-card fade-up">
         <div class="download-icon">↓</div>
         <p class="download-title">Is It Stress, Hormones, or Both?</p>
         <p class="download-desc">A CMBT hormonal mental health resource to help you understand what may be contributing to how you feel.</p>
@@ -187,62 +163,60 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-.page-hero{background:var(--green-mid);padding:clamp(64px,10vw,110px) 0;text-align:center}
+.page-hero{background:var(--ink);padding:clamp(64px,10vw,110px) 0;text-align:center}
 .page-hero h1{color:#fff;margin-bottom:18px}
 .page-hero-sub{font-size:clamp(14px,1.8vw,16px);color:rgba(255,255,255,0.6);line-height:1.75;max-width:560px;margin:0 auto}
+
 .journal{background:var(--cream);padding:var(--pad) 0}
-.faq{background:var(--green-dark);padding:var(--pad) 0}
-.glossary{background:var(--cream);padding:var(--pad) 0}
-.resources-cta{background:var(--green-mid);padding:var(--pad) 0;text-align:center}
-.resources-cta h2{color:#fff;margin-bottom:14px}
-.resources-cta p{font-size:clamp(13px,1.5vw,15px);color:rgba(255,255,255,0.55);max-width:480px;margin:0 auto 32px;line-height:1.75}
 .section-head{text-align:center;margin-bottom:clamp(36px,5vw,52px)}
-.section-head h2{color:var(--green-dark)}
+.section-head h2{color:var(--ink)}
+.art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+.art-card{background:#fff;border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:border-color 0.2s,transform 0.2s;display:block;color:inherit}
+.art-card:hover{border-color:var(--gold);transform:translateY(-3px)}
+.art-top{height:4px}
+.art-top.hormonal{background:var(--gold)}
+.art-top.mental{background:var(--ink)}
+.art-top.clinical{background:var(--green)}
+.art-top.perinatal{background:var(--blush)}
+.art-body{padding:22px}
+.art-cat{display:inline-block;font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:4px 10px;border-radius:4px;margin-bottom:10px}
+.cat-hormonal{background:rgba(245,184,0,0.12);color:var(--gold-dk)}
+.cat-mental{background:rgba(30,30,30,0.06);color:var(--ink-soft)}
+.cat-clinical{background:rgba(125,217,138,0.15);color:#2E7D5E}
+.cat-perinatal{background:rgba(247,138,138,0.12);color:#C05050}
+.art-title{font-family:var(--serif);font-size:clamp(16px,2vw,19px);color:var(--ink);line-height:1.35;margin-bottom:8px;font-weight:400}
+.art-excerpt{font-size:clamp(11px,1.2vw,12px);color:var(--ink-soft);line-height:1.7;margin-bottom:12px}
+.art-meta{font-size:11px;color:#AAA}
+
+.faq{background:var(--ink);padding:var(--pad) 0}
 .faq-head{text-align:center;margin-bottom:clamp(36px,5vw,52px)}
 .faq-head h2{color:#fff}
-.art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
-.art-card{background:#fff;border:0.5px solid rgba(30,45,30,0.1);border-radius:var(--radius-lg);overflow:hidden;transition:border-color 0.2s;cursor:pointer}
-.art-card:hover{border-color:var(--rose)}
-.art-card{position:relative;overflow:hidden}
-.art-card::before{content:'';display:block;height:4px;width:100%;border-radius:var(--radius-lg) var(--radius-lg) 0 0}
-.art-card.hormonal-bar::before{background:#C4917A}
-.art-card.mental-bar::before{background:#2A3828}
-.art-card.clinical-bar::before{background:#6B8C6B}
-.art-card.perinatal-bar::before{background:#A07860}
-.art-body{padding:20px}
-.art-cat{display:inline-block;font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:4px 10px;border-radius:4px;margin-bottom:10px}
-.cat-hormonal{background:rgba(196,145,122,0.12);color:var(--rose)}
-.cat-mental{background:rgba(30,45,30,0.06);color:#5A4A40}
-.cat-clinical{background:rgba(42,56,40,0.08);color:var(--green-mid)}
-.cat-perinatal{background:rgba(196,145,122,0.08);color:#8A6050}
-.art-title{font-family:var(--serif);font-size:clamp(17px,2vw,20px);color:var(--green-dark);line-height:1.35;margin-bottom:8px}
-.art-excerpt{font-size:clamp(11px,1.2vw,12px);color:#7A6A60;line-height:1.7;margin-bottom:12px}
-.art-meta{font-size:11px;color:#AAA}
 .faq-list{display:flex;flex-direction:column;max-width:800px;margin:0 auto}
 .faq-item{border-bottom:0.5px solid rgba(255,255,255,0.08)}
 .faq-q{width:100%;background:none;border:none;text-align:left;padding:22px 0;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .faq-q-text{font-size:clamp(14px,1.6vw,16px);font-weight:500;color:#fff;line-height:1.4}
-.faq-icon{width:20px;height:20px;border:1px solid rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform 0.3s,background 0.2s;color:rgba(255,255,255,0.7);font-size:14px}
-.faq-item.open .faq-icon{transform:rotate(45deg);background:var(--rose);border-color:var(--rose)}
+.faq-icon{width:22px;height:22px;border:1px solid rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform 0.3s,background 0.2s;color:rgba(255,255,255,0.7);font-size:15px}
+.faq-item.open .faq-icon{transform:rotate(45deg);background:var(--gold);border-color:var(--gold);color:var(--ink)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
 .faq-a-inner{font-size:clamp(13px,1.5vw,14px);color:rgba(255,255,255,0.52);line-height:1.8;padding-bottom:22px}
-.glossary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--gap)}
-.glossary-card{background:#fff;border:0.5px solid rgba(30,45,30,0.1);border-radius:var(--radius-md);padding:clamp(20px,3vw,28px)}
-.glossary-term{font-family:var(--serif);font-size:clamp(18px,2.5vw,22px);color:var(--green-dark);margin-bottom:8px}
-.glossary-def{font-size:clamp(12px,1.4vw,13px);color:#5A4A40;line-height:1.75}
-@media(max-width:900px){.art-grid{grid-template-columns:repeat(2,1fr)}.glossary-grid{grid-template-columns:1fr}}
-@media(max-width:600px){.art-grid{grid-template-columns:1fr}}
 
-.downloads{background:var(--green-mid);padding:var(--pad) 0}
+.downloads{background:var(--ink);padding:var(--pad) 0}
+.downloads-head{text-align:center;margin-bottom:clamp(36px,5vw,52px)}
+.downloads-head h2{color:#fff}
 .downloads-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
 .download-card{background:rgba(255,255,255,0.05);border:0.5px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:clamp(24px,3vw,32px);display:flex;flex-direction:column;gap:12px}
-.download-icon{width:40px;height:40px;border-radius:50%;background:var(--rose-light);color:var(--rose);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:500}
+.download-icon{width:40px;height:40px;border-radius:50%;background:rgba(245,184,0,0.15);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:500}
 .download-title{font-size:clamp(14px,1.6vw,16px);font-weight:500;color:#fff;line-height:1.4}
-.download-desc{font-size:clamp(12px,1.3vw,13px);color:rgba(255,255,255,0.52);line-height:1.7;flex:1}
-.download-btn{display:inline-block;background:var(--rose);color:#fff;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:10px 20px;border-radius:var(--radius-pill);text-align:center;transition:opacity 0.2s;margin-top:auto}
+.download-desc{font-size:clamp(12px,1.3vw,13px);color:rgba(255,255,255,0.5);line-height:1.7;flex:1}
+.download-btn{display:inline-block;background:var(--gold);color:var(--ink);font-size:12px;font-weight:600;padding:10px 20px;border-radius:var(--radius-pill);text-align:center;transition:opacity 0.2s;margin-top:auto}
 .download-btn:hover{opacity:0.88}
-@media(max-width:900px){.downloads-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.downloads-grid{grid-template-columns:1fr}}
+
+.resources-cta{background:var(--gold);padding:var(--pad) 0;text-align:center}
+.resources-cta h2{color:var(--ink);margin-bottom:14px}
+.resources-cta p{font-size:clamp(13px,1.5vw,15px);color:rgba(30,30,30,0.65);max-width:480px;margin:0 auto 32px;line-height:1.75}
+
+@media(max-width:900px){.art-grid{grid-template-columns:repeat(2,1fr)}.downloads-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.art-grid,.downloads-grid{grid-template-columns:1fr}}
 </style>
 
 <script>

@@ -4,404 +4,704 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Women's Mental Health & Hormonal Care">
 
-<!-- HERO -->
+<!-- ── HERO ─────────────────────────────────────── -->
 <section class="hero">
-  <div class="blob-field" aria-hidden="true">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
+  <!-- Poster image loads instantly while video loads -->
+  <div class="hero-poster"></div>
+
+  <!-- Looping video — swap src for your own file -->
+  <div class="hero-video-wrap">
+    <video autoplay muted loop playsinline
+      poster="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1600&q=80">
+      <source src="https://www.pexels.com/video/3576378/download/?fps=25&h=1080&w=1920" type="video/mp4"/>
+    </video>
   </div>
-  <div class="hero-content fade-up">
-    <span class="eyebrow eyebrow-dark">Women's mental health · Hormonal care · Online clinic</span>
-    <h1>Your hormones affect everything.<br>Your care should reflect that.</h1>
-    <p class="hero-sub">Behold Your Wonder is an online mental health clinic for women navigating PMDD, perimenopause, postpartum, fertility, and the emotional weight of hormonal health.</p>
-    <div class="btn-row">
-      <a href="/contact" class="btn-primary">Connect to a specialist</a>
 
-    </div>
-  </div>
-</section>
+  <!-- Gradient overlay -->
+  <div class="hero-overlay"></div>
 
-<!-- TRUST BAR -->
-<div class="trust" role="list">
-  <span class="trust-item" role="listitem">HIPAA compliant</span>
-  <div class="trust-sep"></div>
-  <span class="trust-item" role="listitem">Licensed clinicians</span>
-  <div class="trust-sep"></div>
-  <span class="trust-item" role="listitem">100% telehealth</span>
-  <div class="trust-sep"></div>
-  <span class="trust-item" role="listitem">Multiple states served</span>
-  <div class="trust-sep"></div>
-  <span class="trust-item" role="listitem">Evidence-based modalities</span>
-</div>
-
-<!-- VALUE PROPS -->
-<section class="vp">
+  <!-- Content -->
   <div class="container">
-    <div class="vp-head fade-up">
-      <span class="eyebrow eyebrow-light">Mind. Body. Support.</span>
-      <h2>Your body and mind aren't separate.<br>Your care shouldn't be either.</h2>
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="hero-dot"></span>
+        Online clinic · Multiple states · 100% telehealth
+      </div>
+      <h1>
+        Your hormones<br>
+        affect <span class="hl">everything.</span><br>
+        Your care should<br>
+        <em>reflect that.</em>
+      </h1>
+      <p class="hero-sub">
+        Behold Your Wonder is a women's mental health clinic specializing in PMDD,
+        perimenopause, postpartum, and the emotional weight of hormonal health.
+      </p>
+      <div class="hero-actions">
+        <a href="https://beholdyourwonder.clientsecure.me" class="btn-gold" target="_blank" rel="noopener">Connect to a specialist</a>
+        <a href="/services" class="btn-ghost-white">See how it works</a>
+      </div>
+      <div class="trust-row">
+        <span class="trust-chip">✓ HIPAA compliant</span>
+        <span class="trust-chip">✓ Licensed clinicians</span>
+        <span class="trust-chip">✓ Multiple states</span>
+        <span class="trust-chip">✓ Evidence-based</span>
+      </div>
     </div>
-    <div class="card-grid">
-      <div class="vp-card fade-up">
-        <div class="vp-icon" aria-hidden="true">✦</div>
-        <p class="vp-title">Therapy that knows your body</p>
-        <p class="vp-desc">1:1 sessions, group therapy, and async support from clinicians trained in hormonal mental health. You won't have to explain why your cycle affects your mood.</p>
-        <a href="/services" class="vp-link">See how it works →</a>
+  </div>
+
+  <!-- Scroll hint -->
+  <div class="hero-scroll" aria-hidden="true">
+    <div class="hero-scroll-line"></div>
+    <span>scroll</span>
+  </div>
+</section>
+
+<!-- ── STATEMENT ──────────────────────────────────── -->
+<section class="statement">
+  <div class="container">
+    <p class="statement-text">
+      Behold Your Wonder is a mental health clinic for women who've been dismissed —
+      built around the truth that your <span class="hl-ink">body and mind</span>
+      are not separate, and your care <span class="hl-green">shouldn't be either.</span>
+    </p>
+    <div class="compliance-row">
+      <div class="compliance-badge">
+        <div class="compliance-icon">🛡️</div>
+        HIPAA Compliant
       </div>
-      <div class="vp-card fade-up">
-        <div class="vp-icon" aria-hidden="true">✦</div>
-        <p class="vp-title">A specialist network that talks to your therapist</p>
-        <p class="vp-desc">Warm referrals to OBGYNs, PMHNPs, doulas, fertility coaches, and more. Vetted practitioners who receive your full context before you arrive.</p>
-        <a href="/services" class="vp-link">See how it works →</a>
+      <div class="compliance-badge">
+        <div class="compliance-icon">📋</div>
+        Licensed Clinicians Only
       </div>
-      <div class="vp-card fade-up">
-        <div class="vp-icon" aria-hidden="true">✦</div>
-        <p class="vp-title">One front door to your care</p>
-        <p class="vp-desc">Your Mental Health Coordinator handles scheduling, referrals, and continuity. You never have to figure out who to contact or how to navigate your own care.</p>
-        <a href="/services" class="vp-link">See how it works →</a>
+      <div class="compliance-badge">
+        <div class="compliance-icon">🔬</div>
+        Evidence-Based Modalities
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHO THIS IS FOR -->
+<!-- ── WHO IT'S FOR ───────────────────────────────── -->
 <section class="who">
   <div class="container">
-    <div class="who-head fade-up">
-      <span class="eyebrow eyebrow-dark">Who this is for</span>
-      <h2>If you've ever been told it's just stress —<br>this was built for you.</h2>
-    </div>
-    <div class="condition-grid">
-      <div class="condition-card fade-up"><div class="condition-dot"></div><div><p class="condition-name">PMDD</p><p class="condition-desc">Premenstrual dysphoric disorder</p></div></div>
-      <div class="condition-card fade-up"><div class="condition-dot"></div><div><p class="condition-name">Perimenopause</p><p class="condition-desc">Hormonal transition & mood shifts</p></div></div>
-      <div class="condition-card fade-up"><div class="condition-dot"></div><div><p class="condition-name">Postpartum</p><p class="condition-desc">Anxiety, depression & adjustment</p></div></div>
-      <div class="condition-card fade-up"><div class="condition-dot"></div><div><p class="condition-name">Fertility grief</p><p class="condition-desc">Loss, IVF, and the in-between</p></div></div>
-      <div class="condition-card fade-up"><div class="condition-dot"></div><div><p class="condition-name">PCOS</p><p class="condition-desc">Hormonal & emotional complexity</p></div></div>
-      <div class="condition-card fade-up"><div class="condition-dot"></div><div><p class="condition-name">Thyroid disorders</p><p class="condition-desc">Mood, energy & mental health</p></div></div>
+    <div class="who-inner">
+      <div class="who-left">
+        <p class="eyebrow eyebrow-dark">Who this is for</p>
+        <ul class="who-list" id="who-list">
+
+          <li class="who-item active" data-target="pmdd">
+            <div class="who-trigger">
+              <span class="who-dot"></span>
+              <span class="who-name">PMDD</span>
+              <span class="who-arrow">→</span>
+              <span class="who-chevron" aria-hidden="true"></span>
+            </div>
+            <div class="who-drawer">
+              <p class="who-drawer-text">The luteal phase shouldn't feel like a different life. Our clinicians understand PMDD at a neurological level — not as moodiness, but as a disorder that deserves real clinical attention and a real treatment plan.</p>
+              <a href="/services" class="who-drawer-link">Learn more →</a>
+            </div>
+          </li>
+
+          <li class="who-item" data-target="perimenopause">
+            <div class="who-trigger">
+              <span class="who-dot"></span>
+              <span class="who-name">Perimenopause</span>
+              <span class="who-arrow">→</span>
+              <span class="who-chevron" aria-hidden="true"></span>
+            </div>
+            <div class="who-drawer">
+              <p class="who-drawer-text">The anxiety, rage, and grief that arrives before menopause is real — and undertreated. We work with women navigating hormonal transition with clinicians who understand what estrogen does to mood, cognition, and identity.</p>
+              <a href="/services" class="who-drawer-link">Learn more →</a>
+            </div>
+          </li>
+
+          <li class="who-item" data-target="postpartum">
+            <div class="who-trigger">
+              <span class="who-dot"></span>
+              <span class="who-name">Postpartum</span>
+              <span class="who-arrow">→</span>
+              <span class="who-chevron" aria-hidden="true"></span>
+            </div>
+            <div class="who-drawer">
+              <p class="who-drawer-text">Postpartum anxiety and depression are not character flaws. Our perinatal clinicians specialize in the emotional weight of the fourth trimester — and the months beyond it that no one talks about.</p>
+              <a href="/services" class="who-drawer-link">Learn more →</a>
+            </div>
+          </li>
+
+          <li class="who-item" data-target="fertility">
+            <div class="who-trigger">
+              <span class="who-dot"></span>
+              <span class="who-name">Fertility grief</span>
+              <span class="who-arrow">→</span>
+              <span class="who-chevron" aria-hidden="true"></span>
+            </div>
+            <div class="who-drawer">
+              <p class="who-drawer-text">Loss, IVF, miscarriage, and the in-between. Fertility grief is one of the most isolating emotional experiences a woman can face. We create space to process it — without minimizing it.</p>
+              <a href="/services" class="who-drawer-link">Learn more →</a>
+            </div>
+          </li>
+
+          <li class="who-item" data-target="pcos">
+            <div class="who-trigger">
+              <span class="who-dot"></span>
+              <span class="who-name">PCOS</span>
+              <span class="who-arrow">→</span>
+              <span class="who-chevron" aria-hidden="true"></span>
+            </div>
+            <div class="who-drawer">
+              <p class="who-drawer-text">PCOS affects hormones, mood, body image, and identity in ways that are rarely addressed in a 15-minute appointment. Our clinicians understand the emotional complexity — not just the symptoms.</p>
+              <a href="/services" class="who-drawer-link">Learn more →</a>
+            </div>
+          </li>
+
+          <li class="who-item" data-target="thyroid">
+            <div class="who-trigger">
+              <span class="who-dot"></span>
+              <span class="who-name">Thyroid &amp; mood</span>
+              <span class="who-arrow">→</span>
+              <span class="who-chevron" aria-hidden="true"></span>
+            </div>
+            <div class="who-drawer">
+              <p class="who-drawer-text">Thyroid disorders affect energy, sleep, cognition, and emotional regulation in ways that often get mistaken for depression or anxiety. We treat both — together.</p>
+              <a href="/services" class="who-drawer-link">Learn more →</a>
+            </div>
+          </li>
+
+        </ul>
+        <div style="margin-top:32px">
+          <a href="/services" class="btn-outline-ink">View all conditions</a>
+        </div>
+      </div>
+
+      <div class="who-right">
+        <div class="who-panel active" id="panel-pmdd">
+          <div class="who-panel-img" style="background:#F2EDE8">
+            <span class="who-panel-emoji">🌙</span>
+            <span class="who-panel-tag">Premenstrual Dysphoric Disorder</span>
+          </div>
+          <h3>PMDD</h3>
+          <p>The luteal phase shouldn't feel like a different life. Our clinicians understand PMDD at a neurological level — not as moodiness, but as a disorder that deserves real clinical attention and a real treatment plan.</p>
+        </div>
+        <div class="who-panel" id="panel-perimenopause">
+          <div class="who-panel-img" style="background:#FFF5E8">
+            <span class="who-panel-emoji">🍂</span>
+            <span class="who-panel-tag">Perimenopause</span>
+          </div>
+          <h3>Perimenopause</h3>
+          <p>The anxiety, rage, and grief that arrives before menopause is real — and undertreated. We work with women navigating hormonal transition with clinicians who understand what estrogen does to mood, cognition, and identity.</p>
+        </div>
+        <div class="who-panel" id="panel-postpartum">
+          <div class="who-panel-img" style="background:#F0F8FF">
+            <span class="who-panel-emoji">🌸</span>
+            <span class="who-panel-tag">Postpartum</span>
+          </div>
+          <h3>Postpartum</h3>
+          <p>Postpartum anxiety and depression are not character flaws. Our perinatal clinicians specialize in the emotional weight of the fourth trimester — and the months beyond it that no one talks about.</p>
+        </div>
+        <div class="who-panel" id="panel-fertility">
+          <div class="who-panel-img" style="background:#F8F0FF">
+            <span class="who-panel-emoji">🌿</span>
+            <span class="who-panel-tag">Fertility Grief</span>
+          </div>
+          <h3>Fertility grief</h3>
+          <p>Loss, IVF, miscarriage, and the in-between. Fertility grief is one of the most isolating emotional experiences a woman can face. We create space to process it — without minimizing it.</p>
+        </div>
+        <div class="who-panel" id="panel-pcos">
+          <div class="who-panel-img" style="background:#F0FFF4">
+            <span class="who-panel-emoji">⚡</span>
+            <span class="who-panel-tag">PCOS</span>
+          </div>
+          <h3>PCOS</h3>
+          <p>PCOS affects hormones, mood, body image, and identity in ways that are rarely addressed in a 15-minute appointment. Our clinicians understand the emotional complexity — not just the symptoms.</p>
+        </div>
+        <div class="who-panel" id="panel-thyroid">
+          <div class="who-panel-img" style="background:#FFFBF0">
+            <span class="who-panel-emoji">⚖️</span>
+            <span class="who-panel-tag">Thyroid &amp; Mood</span>
+          </div>
+          <h3>Thyroid &amp; mood</h3>
+          <p>Thyroid disorders affect energy, sleep, cognition, and emotional regulation in ways that often get mistaken for depression or anxiety. We treat both — together.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
+<!-- ── HOW IT WORKS ───────────────────────────────── -->
 <section class="how">
   <div class="container">
     <div class="how-head fade-up">
-      <span class="eyebrow eyebrow-light">How it works</span>
-      <h2>From first contact to ongoing care</h2>
+      <p class="eyebrow eyebrow-dark">How it works</p>
+      <h2>From first contact<br>to ongoing care</h2>
+      <p class="how-sub">You shouldn't have to figure out who to call or how to navigate your own care. We built a front door that actually works.</p>
     </div>
-    <div class="steps">
-      <div class="step fade-up">
-        <div class="step-num" aria-hidden="true">01</div>
-        <p class="step-title">Book a 25 minute consultation</p>
-        <p class="step-desc">A 25-minute video call with a licensed therapist to understand your needs, concerns, and goals.</p>
+    <div class="how-steps">
+      <div class="how-step fade-up">
+        <div class="how-num">01</div>
+        <h3>Book a 25-minute consultation</h3>
+        <p>A video call with a licensed therapist to understand your needs, concerns, and goals — before you commit to anything.</p>
       </div>
-      <div class="step fade-up">
-        <div class="step-num" aria-hidden="true">02</div>
-        <p class="step-title">Get matched</p>
-        <p class="step-desc">We pair you with a licensed clinician who has direct experience with your specific hormonal health concerns.</p>
+      <div class="how-step fade-up">
+        <div class="how-num">02</div>
+        <h3>Get matched to your specialist</h3>
+        <p>We pair you with a licensed clinician who has direct experience with your specific hormonal health concerns. Not a generalist.</p>
       </div>
-      <div class="step fade-up">
-        <div class="step-num" aria-hidden="true">03</div>
-        <p class="step-title">Begin care</p>
-        <p class="step-desc">Start therapy, access async support between sessions, and connect to our specialist network — all coordinated in one place.</p>
+      <div class="how-step fade-up">
+        <div class="how-num">03</div>
+        <h3>Begin coordinated care</h3>
+        <p>Start therapy, access async support between sessions, and connect to our specialist network — all coordinated by your Mental Health Coordinator.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CMBT -->
+<!-- ── CMBT ───────────────────────────────────────── -->
 <section class="cmbt">
   <div class="container">
-    <div class="cmbt-card fade-up">
-      <span class="cmbt-badge">Our clinical modality</span>
-      <h2>Behold Your Wonder Center<br>Core Messaging Based Therapy</h2>
-      <p class="cmbt-desc">CMBT is our proprietary integrative therapy — drawing on CBT, psychodynamic, EFT, and humanistic approaches — designed to help clients uncover, explore, and reframe the internalized messages shaping their emotional and relational lives.</p>
-      <a href="/cmbt" class="btn-outline-dark">See how it works</a>
-    </div>
-  </div>
-</section>
-
-<!-- CREDENTIALS -->
-<section class="creds">
-  <div class="container">
-    <div class="creds-head fade-up">
-      <span class="eyebrow eyebrow-light">Clinical standards</span>
-      <h2>Care you can trust.<br>Standards that show it.</h2>
-      <p class="creds-sub">Every clinician at Behold Your Wonder meets rigorous standards — not just for licensure, but for specialized expertise in women's hormonal mental health.</p>
-    </div>
-    <div class="cred-grid">
-      <div class="cred-card fade-up">
-        <div class="cred-icon" aria-hidden="true">✦</div>
-        <div><p class="cred-title">Fully licensed clinicians</p><p class="cred-desc">All therapists hold active state licensure — LMFT, LPC, or LCSW — and are individually vetted before joining our clinical team.</p></div>
-      </div>
-      <div class="cred-card fade-up">
-        <div class="cred-icon" aria-hidden="true">✦</div>
-        <div><p class="cred-title">Hormonal health specialization</p><p class="cred-desc">We only work with clinicians who have direct experience treating PMDD, perinatal mood disorders, perimenopause, and hormonal mental health.</p></div>
-      </div>
-      <div class="cred-card fade-up">
-        <div class="cred-icon" aria-hidden="true">✦</div>
-        <div><p class="cred-title">HIPAA compliant telehealth</p><p class="cred-desc">All sessions are delivered via secure, encrypted telehealth platforms that meet or exceed HIPAA standards for protected health information.</p></div>
-      </div>
-      <div class="cred-card fade-up">
-        <div class="cred-icon" aria-hidden="true">✦</div>
-        <div><p class="cred-title">PMHNP medication support</p><p class="cred-desc">When medication evaluation is appropriate, we connect you to our network of Psychiatric Mental Health Nurse Practitioners — no separate referral needed.</p></div>
-      </div>
-    </div>
-    <div class="license-strip fade-up">
-      <span class="license-label">Clinician credentials include</span>
-      <span class="license-pill">LMFT</span>
-      <span class="license-pill">LPC</span>
-      <span class="license-pill">LCSW</span>
-      <span class="license-pill">PMHNP</span>
-      <span class="license-pill">Evidence-based</span>
-      <span class="license-pill">Telehealth</span>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="test">
-  <div class="container">
-    <div class="test-head fade-up">
-      <span class="eyebrow eyebrow-dark">Client experiences</span>
-      <h2>Women who found their way here</h2>
-    </div>
-    <div class="test-grid">
-      <div class="test-card fade-up">
-        <div class="test-stars" aria-label="5 stars">★★★★★</div>
-        <p class="test-quote">"For the first time, my therapist understood that my cycle and my mental health were the same conversation."</p>
-        <p class="test-author">— Client</p><p class="test-condition">PMDD</p>
-      </div>
-      <div class="test-card fade-up">
-        <div class="test-stars" aria-label="5 stars">★★★★★</div>
-        <p class="test-quote">"I didn't have to explain myself from scratch. They already understood what perimenopause does to your mind."</p>
-        <p class="test-author">— Client</p><p class="test-condition">Perimenopause</p>
-      </div>
-      <div class="test-card fade-up">
-        <div class="test-stars" aria-label="5 stars">★★★★★</div>
-        <p class="test-quote">"The coordinator handled everything. I just had to show up. That alone changed everything for me."</p>
-        <p class="test-author">— Client</p><p class="test-condition">Postpartum</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ARTICLES -->
-<section class="articles">
-  <div class="container">
-    <div class="articles-head fade-up">
-      <span class="eyebrow eyebrow-light">From our journal</span>
-      <h2>Understand what's happening in your body</h2>
-      <p class="articles-sub">Clinical insights written for real women — not search engines.</p>
-    </div>
-    <div class="articles-grid">
-      <article class="art-card fade-up">
-        <div class="art-img" aria-hidden="true"></div>
-        <div class="art-body">
-          <span class="art-cat cat-hormonal">Hormonal health</span>
-          <p class="art-title">What PMDD actually does to your brain — and why it's not in your head</p>
-          <p class="art-excerpt">Understanding the luteal phase, estrogen withdrawal, and why your mood changes aren't a character flaw.</p>
-          <div class="art-meta">6 min read</div>
+    <div class="cmbt-inner">
+      <div class="cmbt-left fade-up">
+        <p class="eyebrow eyebrow-gold">Our clinical modality</p>
+        <h2>Core Messaging<br>Based Therapy™</h2>
+        <p class="cmbt-desc">CMBT is our proprietary integrative therapy — designed to help clients uncover, explore, and reframe the internalized messages shaping their emotional and relational lives.</p>
+        <div class="cmbt-pillars">
+          <div class="cmbt-pillar">
+            <div class="cmbt-pillar-dot"></div>
+            <p><strong>Uncover</strong> — surface the messages that have shaped your relationship with your body and emotions</p>
+          </div>
+          <div class="cmbt-pillar">
+            <div class="cmbt-pillar-dot"></div>
+            <p><strong>Explore</strong> — understand where they came from and how they've organized your inner world</p>
+          </div>
+          <div class="cmbt-pillar">
+            <div class="cmbt-pillar-dot"></div>
+            <p><strong>Reframe</strong> — build a new relationship with yourself that isn't mediated by those messages</p>
+          </div>
         </div>
-      </article>
-      <article class="art-card fade-up">
-        <div class="art-img" aria-hidden="true"></div>
-        <div class="art-body">
-          <span class="art-cat cat-mental">Mental wellness</span>
-          <p class="art-title">The emotional weight of perimenopause nobody talks about</p>
-          <p class="art-excerpt">Anxiety, rage, and grief that arrives before menopause — what it is and what actually helps.</p>
-          <div class="art-meta">8 min read</div>
+        <a href="/cmbt" class="btn-gold">Learn about CMBT</a>
+      </div>
+      <div class="cmbt-right fade-up">
+        <div class="cmbt-badge">Proprietary Modality</div>
+        <p class="cmbt-name">Behold Your Wonder Center<br>Core Messaging Based Therapy™</p>
+        <p class="cmbt-sub">An integrative approach drawing on multiple evidence-based frameworks — customized for women navigating hormonal mental health.</p>
+        <div class="cmbt-methods">
+          <span class="cmbt-method">CBT</span>
+          <span class="cmbt-method">Psychodynamic</span>
+          <span class="cmbt-method">EFT</span>
+          <span class="cmbt-method">Humanistic</span>
+          <span class="cmbt-method">Somatic</span>
+          <span class="cmbt-method">Integrative</span>
         </div>
-      </article>
-      <article class="art-card fade-up">
-        <div class="art-img" aria-hidden="true"></div>
-        <div class="art-body">
-          <span class="art-cat cat-clinical">Clinical insights</span>
-          <p class="art-title">Why fragmented care fails women with hormonal conditions</p>
-          <p class="art-excerpt">When your OBGYN and therapist never speak to each other, you pay the price. Here's a better model.</p>
-          <div class="art-meta">5 min read</div>
-        </div>
-      </article>
-    </div>
-    <div class="articles-cta fade-up">
-      <a href="/resources" class="btn-ghost">View all articles</a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- NEWSLETTER -->
-<section class="nl">
-  <div class="nl-blob-1" aria-hidden="true"></div>
-  <div class="nl-blob-2" aria-hidden="true"></div>
-  <div class="nl-content fade-up">
-    <span class="eyebrow eyebrow-dark">A community that gets it. In your inbox.</span>
-    <h2>The information you wished your doctor gave you.</h2>
-    <p class="nl-sub">Curated insights from leading professionals in women's mental health and hormonal care — delivered weekly.</p>
-<form class="nl-form" id="nl-form" action="https://formspree.io/f/mdavaqnb" method="POST">      <input class="nl-input" type="text" name="name" placeholder="Your name" autocomplete="name" required>
-      <input class="nl-input" type="email" name="email" placeholder="Your email" autocomplete="email" required>
-      <button class="nl-btn" type="submit" id="nl-btn">Sign up privately</button>
-    </form>
-    <p class="nl-privacy">We never share your information. Unsubscribe any time.</p>
+<!-- ── TESTIMONIALS ──────────────────────────────── -->
+<section class="testimonials">
+  <div class="container">
+    <div class="t-head fade-up">
+      <p class="eyebrow eyebrow-dark">Client experiences</p>
+      <h2>Women who found<br>their way here</h2>
+    </div>
+    <div class="t-grid">
+      <div class="t-card fade-up">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-quote">"For the first time, my therapist understood that my cycle and my mental health were the same conversation."</p>
+        <span class="t-condition">PMDD</span>
+        <p class="t-author">— Client</p>
+      </div>
+      <div class="t-card fade-up">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-quote">"I didn't have to explain myself from scratch. They already understood what perimenopause does to your mind."</p>
+        <span class="t-condition">Perimenopause</span>
+        <p class="t-author">— Client</p>
+      </div>
+      <div class="t-card fade-up">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-quote">"The coordinator handled everything. I just had to show up. That alone changed everything for me."</p>
+        <span class="t-condition">Postpartum</span>
+        <p class="t-author">— Client</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── JOURNAL ───────────────────────────────────── -->
+<section class="journal">
+  <div class="container">
+    <div class="journal-head">
+      <div>
+        <p class="eyebrow eyebrow-dark">From our journal</p>
+        <h2>Understand what's<br>happening in your body</h2>
+      </div>
+      <a href="/journal" class="btn-outline-ink">View all articles</a>
+    </div>
+    <div class="j-grid">
+      <a href="/journal/pmdd-brain" class="j-card">
+        <div class="j-img" style="background:var(--green-lt)">🧠</div>
+        <div class="j-body">
+          <span class="j-tag">Hormonal health</span>
+          <p class="j-title">What PMDD actually does to your brain — and why it's not a character flaw</p>
+          <p class="j-excerpt">Understanding the luteal phase, estrogen withdrawal, and why your mood changes aren't a character flaw.</p>
+          <span class="j-read">6 min read →</span>
+        </div>
+      </a>
+      <a href="/journal/perimenopause-emotional-weight" class="j-card">
+        <div class="j-img" style="background:#FFF5E8">🍂</div>
+        <div class="j-body">
+          <span class="j-tag">Mental wellness</span>
+          <p class="j-title">The emotional weight of perimenopause nobody talks about</p>
+          <p class="j-excerpt">Anxiety, rage, and grief that arrives before menopause — what it is and what actually helps.</p>
+          <span class="j-read">8 min read →</span>
+        </div>
+      </a>
+      <a href="/journal/fragmented-care" class="j-card">
+        <div class="j-img" style="background:#F0F8FF">🔗</div>
+        <div class="j-body">
+          <span class="j-tag">Clinical insights</span>
+          <p class="j-title">Why fragmented care fails women with hormonal conditions</p>
+          <p class="j-excerpt">When your OBGYN and therapist never speak to each other, you pay the price. Here's a better model.</p>
+          <span class="j-read">5 min read →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── NEWSLETTER ─────────────────────────────────── -->
+<section class="newsletter">
+  <div class="container">
+    <h2>The information you wished<br>your doctor gave you.</h2>
+    <p class="newsletter-sub">Curated insights from leading professionals in women's mental health and hormonal care — delivered weekly.</p>
+    <div class="newsletter-form">
+      <input type="email" placeholder="Your email address" aria-label="Email address"/>
+      <button type="submit" class="btn-dark">Subscribe</button>
+    </div>
+    <p class="newsletter-note">We never share your information. Unsubscribe any time.</p>
   </div>
 </section>
 
 </Layout>
 
 <style>
-/* HERO */
-.hero{background:var(--cream);position:relative;overflow:hidden;padding:var(--pad) 0;text-align:center}
-.blob-field{position:absolute;inset:0;pointer-events:none;z-index:0}
-.blob{position:absolute;opacity:0.2}
-.blob-1{width:clamp(280px,45vw,580px);height:clamp(160px,26vw,340px);background:#D9A89A;top:-40px;left:-80px;border-radius:65% 35% 50% 50% / 55% 45% 60% 40%;animation:blob1 14s ease-in-out infinite}
-.blob-2{width:clamp(240px,38vw,500px);height:clamp(140px,22vw,300px);background:#C8B4A8;bottom:-40px;right:-60px;border-radius:50% 60% 40% 55% / 60% 40% 55% 45%;animation:blob2 18s ease-in-out infinite}
-.blob-3{width:clamp(180px,28vw,360px);height:clamp(110px,17vw,220px);background:#D4A090;top:60px;right:clamp(20px,10vw,120px);border-radius:55% 45% 62% 38% / 48% 58% 42% 52%;animation:blob3 11s ease-in-out infinite}
-@keyframes blob1{0%,100%{transform:translate(0,0) scale(1) rotate(0deg)}33%{transform:translate(18px,-12px) scale(1.03) rotate(1.5deg)}66%{transform:translate(-10px,16px) scale(0.97) rotate(-1deg)}}
-@keyframes blob2{0%,100%{transform:translate(0,0) scale(1) rotate(0deg)}40%{transform:translate(-20px,14px) scale(1.04) rotate(-2deg)}75%{transform:translate(12px,-8px) scale(0.98) rotate(1deg)}}
-@keyframes blob3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(10px,12px) scale(0.96)}}
-.hero-content{position:relative;z-index:1;max-width:680px;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
-.hero h1{color:var(--green-dark);margin-bottom:20px}
-.hero-sub{font-size:clamp(14px,1.8vw,16px);color:#5A4A40;line-height:1.75;margin-bottom:38px}
-.btn-outline{background:transparent;color:var(--green-dark);font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:14px 32px;border-radius:var(--radius-pill);border:1.5px solid var(--green-dark);display:inline-block;transition:background 0.2s,color 0.2s}
-.btn-outline:hover{background:var(--green-dark);color:#fff}
+/* ── HERO ─────────────────────────────────── */
+.hero { position:relative; min-height:100vh; display:flex; align-items:center; overflow:hidden; }
+.hero-poster { position:absolute; inset:0; z-index:0; background:#1a1208 url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1600&q=80') center/cover no-repeat; }
+.hero-video-wrap { position:absolute; inset:0; z-index:1; }
+.hero-video-wrap video { width:100%; height:100%; object-fit:cover; object-position:center; }
+.hero-overlay { position:absolute; inset:0; z-index:2; background:linear-gradient(105deg,rgba(10,8,6,.84) 0%,rgba(10,8,6,.6) 45%,rgba(10,8,6,.22) 100%); }
+.hero-content { position:relative; z-index:3; padding:140px 0 100px; max-width:620px; }
+.hero-eyebrow { display:inline-flex; align-items:center; gap:7px; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.18); backdrop-filter:blur(6px); border-radius:100px; padding:6px 14px; font-size:12px; font-weight:600; color:rgba(255,255,255,.85); margin-bottom:28px; }
+.hero-dot { width:7px; height:7px; background:#7DD98A; border-radius:50%; flex-shrink:0; }
+.hero h1 { font-family:'Fraunces',Georgia,serif; font-size:clamp(40px,5.5vw,72px); font-weight:300; line-height:1.08; color:#fff; margin-bottom:24px; }
+.hero h1 em { font-style:italic; }
+.hl { background:#F5B800; border-radius:6px; padding:1px 10px; color:#1E1E1E; }
+.hero-sub { font-size:17px; color:rgba(255,255,255,.72); max-width:480px; margin-bottom:36px; line-height:1.75; font-weight:300; }
+.hero-actions { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:28px; }
+.btn-gold { background:#F5B800; color:#1E1E1E; font-size:14px; font-weight:600; padding:13px 26px; border-radius:100px; display:inline-block; transition:opacity .2s,transform .15s; }
+.btn-gold:hover { opacity:.9; transform:translateY(-1px); }
+.btn-ghost-white { background:transparent; border:1.5px solid rgba(255,255,255,.4); color:#fff; font-size:14px; font-weight:500; padding:12px 26px; border-radius:100px; display:inline-block; transition:border-color .2s; }
+.btn-ghost-white:hover { border-color:#fff; }
+.trust-row { display:flex; gap:10px; flex-wrap:wrap; }
+.trust-chip { display:inline-flex; align-items:center; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.18); backdrop-filter:blur(6px); border-radius:100px; padding:7px 14px; font-size:13px; font-weight:500; color:rgba(255,255,255,.8); }
+.hero-scroll { position:absolute; bottom:32px; left:50%; transform:translateX(-50%); z-index:3; display:flex; flex-direction:column; align-items:center; gap:6px; color:rgba(255,255,255,.4); font-size:10px; letter-spacing:.1em; text-transform:uppercase; }
+.hero-scroll-line { width:1px; height:36px; background:linear-gradient(to bottom,rgba(255,255,255,.4),transparent); animation:scrollpulse 2s ease-in-out infinite; }
+@keyframes scrollpulse { 0%,100%{opacity:.4} 50%{opacity:1} }
 
-/* TRUST BAR */
-.trust{background:var(--green-dark);padding:16px clamp(20px,5vw,48px);display:flex;align-items:center;justify-content:center;gap:clamp(16px,3vw,36px);flex-wrap:wrap}
-.trust-item{font-size:clamp(10px,1.2vw,12px);letter-spacing:0.06em;color:rgba(255,255,255,0.6)}
-.trust-sep{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,0.2)}
+/* ── STATEMENT ────────────────────────────── */
+.statement { background:#fff; padding:80px 0; text-align:center; }
+.statement-text { font-family:'Fraunces',Georgia,serif; font-size:clamp(22px,3.2vw,40px); font-weight:300; line-height:1.35; color:#1E1E1E; max-width:800px; margin:0 auto 44px; }
+.hl-ink { background:#F5B800; border-radius:5px; padding:1px 8px; }
+.hl-green { background:#7DD98A; border-radius:5px; padding:1px 8px; }
+.compliance-row { display:flex; gap:32px; justify-content:center; flex-wrap:wrap; align-items:center; }
+.compliance-badge { display:flex; align-items:center; gap:10px; font-size:14px; font-weight:500; color:#5A5A5A; }
+.compliance-icon { width:36px; height:36px; background:#E8F8EB; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:18px; }
 
-/* VALUE PROPS */
-.vp{background:var(--green-mid);padding:var(--pad) 0}
-.vp-head{text-align:center;margin-bottom:clamp(36px,5vw,56px)}
-.vp-head h2{color:#fff}
-.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
-.vp-card{background:rgba(255,255,255,0.055);border:0.5px solid rgba(255,255,255,0.11);border-radius:var(--radius-lg);padding:clamp(22px,3vw,34px);transition:background 0.25s}
-.vp-card:hover{background:rgba(255,255,255,0.08)}
-.vp-icon{width:46px;height:46px;background:var(--rose-light);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--rose);font-size:18px}
-.vp-title{font-size:clamp(13px,1.5vw,15px);font-weight:500;color:#fff;margin-bottom:10px;line-height:1.4}
-.vp-desc{font-size:clamp(12px,1.3vw,13px);color:rgba(255,255,255,0.52);line-height:1.75;margin-bottom:18px}
-.vp-link{font-size:12px;color:var(--rose);display:flex;align-items:center;gap:6px;transition:gap 0.2s}
-.vp-link:hover{gap:10px}
+/* ── WHO IT'S FOR ─────────────────────────── */
+.who { padding:96px 0; background:#F2EDE8; }
+.who-inner { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+.who-list { margin-top:8px; }
+.who-item { display:flex; flex-direction:column; border-bottom:1px solid rgba(30,30,30,.1); cursor:pointer; }
+.who-item:first-child { border-top:1px solid rgba(30,30,30,.1); }
+.who-trigger { display:flex; align-items:center; gap:10px; padding:16px 0; width:100%; }
+.who-dot { width:8px; height:8px; border-radius:50%; background:#F5B800; flex-shrink:0; opacity:0; transition:opacity .15s; }
+.who-item.active .who-dot { opacity:1; }
+.who-name { font-family:'Fraunces',Georgia,serif; font-size:clamp(22px,2.5vw,32px); font-weight:300; color:#9A9A9A; transition:color .15s; line-height:1.1; }
+.who-item.active .who-name, .who-item.open .who-name { color:#1E1E1E; }
+.who-arrow { margin-left:auto; font-size:18px; opacity:0; transition:opacity .15s; flex-shrink:0; }
+.who-item.active .who-arrow { opacity:1; }
 
-/* WHO THIS IS FOR */
-.who{background:var(--cream);padding:var(--pad) 0}
-.who-head{text-align:center;margin-bottom:clamp(36px,5vw,52px)}
-.who-head h2{color:var(--green-dark)}
-.condition-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
-.condition-card{background:#fff;border:0.5px solid rgba(30,45,30,0.1);border-radius:var(--radius-md);padding:20px 22px;display:flex;align-items:flex-start;gap:14px;transition:border-color 0.2s}
-.condition-card:hover{border-color:var(--rose)}
-.condition-dot{width:8px;height:8px;border-radius:50%;background:var(--rose);flex-shrink:0;margin-top:5px}
-.condition-name{font-size:clamp(13px,1.5vw,14px);font-weight:500;color:var(--green-dark);margin-bottom:3px}
-.condition-desc{font-size:clamp(11px,1.2vw,12px);color:#7A6A60;line-height:1.5}
-
-/* HOW IT WORKS */
-.how{background:var(--green-dark);padding:var(--pad) 0}
-.how-head{text-align:center;margin-bottom:clamp(40px,5vw,64px)}
-.how-head h2{color:#fff}
-.steps{display:grid;grid-template-columns:repeat(3,1fr)}
-.step{text-align:center;padding:0 clamp(20px,3vw,48px);position:relative}
-.step:not(:last-child)::after{content:'';position:absolute;right:0;top:28px;width:1px;height:48px;background:rgba(255,255,255,0.12)}
-.step-num{font-family:var(--serif);font-size:clamp(48px,6vw,72px);font-weight:400;color:rgba(255,255,255,0.07);line-height:1;margin-bottom:10px}
-.step-title{font-size:clamp(13px,1.5vw,15px);font-weight:500;color:#fff;margin-bottom:10px}
-.step-desc{font-size:clamp(12px,1.3vw,13px);color:rgba(255,255,255,0.48);line-height:1.75}
-
-/* CMBT */
-.cmbt{background:var(--cream);padding:var(--pad) 0}
-.cmbt-card{max-width:740px;margin:0 auto;background:#fff;border:1px solid rgba(196,145,122,0.3);border-radius:var(--radius-lg);padding:clamp(36px,5vw,64px) clamp(28px,5vw,60px);text-align:center}
-.cmbt-badge{display:inline-block;font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--rose);background:var(--rose-light);padding:6px 16px;border-radius:var(--radius-pill);margin-bottom:26px}
-.cmbt-card h2{color:var(--green-dark);margin-bottom:16px;font-size:clamp(20px,3vw,34px)}
-.cmbt-desc{font-size:clamp(13px,1.5vw,15px);color:#5A4A40;line-height:1.85;margin-bottom:30px}
-.btn-outline-dark{border:1.5px solid var(--green-dark);color:var(--green-dark);font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:14px 32px;border-radius:var(--radius-pill);display:inline-block;transition:background 0.2s,color 0.2s}
-.btn-outline-dark:hover{background:var(--green-dark);color:#fff}
-
-/* CREDENTIALS */
-.creds{background:var(--green-mid);padding:var(--pad) 0}
-.creds-head{text-align:center;margin-bottom:clamp(36px,5vw,56px)}
-.creds-head h2{color:#fff}
-.creds-sub{font-size:clamp(13px,1.5vw,14px);color:rgba(255,255,255,0.48);line-height:1.75;max-width:480px;margin:14px auto 0}
-.cred-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--gap);margin-bottom:44px}
-.cred-card{background:rgba(255,255,255,0.05);border:0.5px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:clamp(22px,3vw,32px);display:flex;align-items:flex-start;gap:18px;transition:background 0.25s}
-.cred-card:hover{background:rgba(255,255,255,0.08)}
-.cred-icon{width:46px;height:46px;background:var(--rose-light);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--rose);font-size:18px}
-.cred-title{font-size:clamp(13px,1.5vw,15px);font-weight:500;color:#fff;margin-bottom:8px}
-.cred-desc{font-size:clamp(12px,1.3vw,13px);color:rgba(255,255,255,0.5);line-height:1.75}
-.license-strip{border-top:0.5px solid rgba(255,255,255,0.1);padding-top:32px;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
-.license-label{font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:0.06em;text-transform:uppercase;margin-right:6px}
-.license-pill{background:rgba(255,255,255,0.07);border:0.5px solid rgba(255,255,255,0.12);border-radius:var(--radius-pill);padding:6px 16px;font-size:12px;color:rgba(255,255,255,0.6);font-weight:500}
-
-/* TESTIMONIALS */
-.test{background:var(--cream);padding:var(--pad) 0}
-.test-head{text-align:center;margin-bottom:clamp(36px,5vw,52px)}
-.test-head h2{color:var(--green-dark)}
-.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
-.test-card{background:#fff;border:0.5px solid rgba(30,45,30,0.1);border-radius:var(--radius-lg);padding:clamp(22px,3vw,30px)}
-.test-stars{color:var(--rose);font-size:14px;margin-bottom:14px;letter-spacing:2px}
-.test-quote{font-family:var(--serif);font-size:clamp(16px,2vw,19px);font-style:italic;color:var(--green-dark);line-height:1.6;margin-bottom:18px}
-.test-author{font-size:12px;color:#7A6A60;font-weight:500}
-.test-condition{font-size:11px;color:var(--rose);margin-top:3px}
-
-/* ARTICLES */
-.articles{background:var(--green-dark);padding:var(--pad) 0}
-.articles-head{text-align:center;margin-bottom:clamp(36px,5vw,52px)}
-.articles-head h2{color:#fff}
-.articles-sub{font-size:clamp(13px,1.5vw,14px);color:rgba(255,255,255,0.45);margin-top:10px}
-.articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
-.art-card{background:rgba(255,255,255,0.04);border:0.5px solid rgba(255,255,255,0.09);border-radius:var(--radius-lg);overflow:hidden;transition:background 0.25s;cursor:pointer}
-.art-card:hover{background:rgba(255,255,255,0.07)}
-.art-img{height:120px;background:rgba(255,255,255,0.05);border-bottom:0.5px solid rgba(255,255,255,0.07)}
-.art-body{padding:20px}
-.art-cat{display:inline-block;font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:4px 10px;border-radius:4px;margin-bottom:12px}
-.cat-hormonal{background:rgba(196,145,122,0.18);color:var(--rose)}
-.cat-mental{background:rgba(255,255,255,0.07);color:rgba(255,255,255,0.55)}
-.cat-clinical{background:rgba(42,56,40,0.7);color:rgba(255,255,255,0.55);border:0.5px solid rgba(255,255,255,0.1)}
-.art-title{font-family:var(--serif);font-size:clamp(16px,2vw,19px);font-weight:500;color:#fff;line-height:1.4;margin-bottom:10px}
-.art-excerpt{font-size:clamp(11px,1.2vw,12px);color:rgba(255,255,255,0.42);line-height:1.7;margin-bottom:12px}
-.art-meta{font-size:11px;color:rgba(255,255,255,0.28)}
-.articles-cta{text-align:center;margin-top:40px}
-.btn-ghost{display:inline-block;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:13px 32px;border-radius:var(--radius-pill);transition:border-color 0.2s,color 0.2s}
-.btn-ghost:hover{border-color:rgba(255,255,255,0.5);color:#fff}
-
-/* NEWSLETTER */
-.nl{background:var(--cream);padding:var(--pad) 0;text-align:center;position:relative;overflow:hidden}
-.nl-blob-1{position:absolute;width:clamp(220px,35vw,440px);height:clamp(130px,20vw,260px);background:#D9A89A;opacity:0.17;border-radius:65% 35% 50% 50% / 55% 45% 60% 40%;top:-50px;left:-80px;animation:blob1 16s ease-in-out infinite;pointer-events:none}
-.nl-blob-2{position:absolute;width:clamp(200px,30vw,380px);height:clamp(120px,18vw,220px);background:#C8B4A8;opacity:0.14;border-radius:50% 60% 40% 55% / 60% 40% 55% 45%;bottom:-40px;right:-60px;animation:blob2 20s ease-in-out infinite;pointer-events:none}
-.nl-content{position:relative;z-index:1;max-width:520px;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
-.nl-content h2{color:var(--green-dark);margin-bottom:14px}
-.nl-sub{font-size:clamp(13px,1.5vw,15px);color:#5A4A40;line-height:1.75;margin-bottom:34px}
-.nl-form{display:flex;flex-direction:column;align-items:center;gap:14px}
-.nl-input{width:100%;max-width:380px;background:transparent;border:none;border-bottom:1px solid rgba(30,45,30,0.28);padding:12px 0;font-size:14px;font-family:var(--sans);color:var(--green-dark);text-align:center;outline:none;transition:border-color 0.2s}
-.nl-input::placeholder{color:rgba(30,45,30,0.38)}
-.nl-input:focus{border-color:var(--rose)}
-.nl-btn{background:var(--rose);color:#fff;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:14px 36px;border-radius:var(--radius-pill);border:none;cursor:pointer;margin-top:8px;font-family:var(--sans);transition:opacity 0.2s}
-.nl-btn:hover{opacity:0.88}
-.nl-privacy{font-size:11px;color:rgba(30,45,30,0.38);margin-top:14px}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-  .card-grid,.test-grid,.articles-grid,.condition-grid{grid-template-columns:repeat(2,1fr)}
-  .cred-grid{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr;gap:40px}
-  .step:not(:last-child)::after{display:none}
+/* Chevron — mobile only toggle indicator */
+.who-chevron {
+  display: none;
+  margin-left: auto;
+  width: 20px; height: 20px;
+  flex-shrink: 0;
+  position: relative;
 }
-@media(max-width:600px){
-  .card-grid,.test-grid,.articles-grid,.condition-grid{grid-template-columns:1fr}
-  .trust{gap:12px}
-  .trust-sep{display:none}
-  .btn-row{flex-direction:column;align-items:center}
-  .btn-primary,.btn-outline{width:100%;max-width:280px;text-align:center}
+.who-chevron::before,
+.who-chevron::after {
+  content: '';
+  position: absolute;
+  background: #1E1E1E;
+  border-radius: 2px;
+  transition: transform 0.25s ease;
+}
+.who-chevron::before { width: 10px; height: 1.5px; top: 50%; left: 2px; transform: translateY(-50%) rotate(45deg); }
+.who-chevron::after  { width: 10px; height: 1.5px; top: 50%; right: 2px; transform: translateY(-50%) rotate(-45deg); }
+.who-item.open .who-chevron::before { transform: translateY(-50%) rotate(-45deg); }
+.who-item.open .who-chevron::after  { transform: translateY(-50%) rotate(45deg); }
+
+/* Drawer — collapsed by default, opens on mobile */
+.who-drawer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.38s ease, padding 0.3s ease;
+  padding: 0 0 0 18px;
+}
+.who-item.open .who-drawer {
+  max-height: 400px;
+  padding: 4px 0 20px 18px;
+}
+.who-drawer-text { font-size:14px; color:#5A5A5A; line-height:1.75; margin-bottom:12px; }
+.who-drawer-link { font-size:13px; font-weight:600; color:#1E1E1E; text-decoration:underline; text-underline-offset:3px; }
+
+.btn-outline-ink { border:1.5px solid #1E1E1E; color:#1E1E1E; font-size:13px; font-weight:500; padding:12px 26px; border-radius:100px; display:inline-block; transition:background .2s,color .2s; }
+.btn-outline-ink:hover { background:#1E1E1E; color:#fff; }
+.who-right { position:sticky; top:100px; }
+.who-panel { display:none; }
+.who-panel.active { display:block; }
+.who-panel-img { border-radius:16px; aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; margin-bottom:24px; border:1px solid rgba(30,30,30,.08); position:relative; }
+.who-panel-emoji { font-size:64px; }
+.who-panel-tag { position:absolute; bottom:14px; left:14px; background:#fff; border-radius:100px; padding:5px 14px; font-size:11px; font-weight:600; border:1px solid rgba(30,30,30,.1); color:#5A5A5A; }
+.who-panel h3 { font-size:22px; font-weight:400; color:#1E1E1E; margin-bottom:10px; }
+.who-panel p { font-size:15px; color:#5A5A5A; line-height:1.75; }
+
+/* ── HOW IT WORKS ─────────────────────────── */
+.how { background:#E8F8EB; padding:96px 0; }
+.how-head { text-align:center; margin-bottom:56px; }
+.how-head h2 { color:#1E1E1E; margin:12px 0 16px; }
+.how-sub { font-size:16px; color:#5A5A5A; max-width:480px; margin:0 auto; }
+.how-steps { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.how-step { background:#fff; border-radius:16px; padding:36px 28px; border:1px solid rgba(125,217,138,.25); }
+.how-num { font-family:'Fraunces',Georgia,serif; font-size:52px; font-weight:300; color:#7DD98A; line-height:1; margin-bottom:16px; }
+.how-step h3 { font-size:17px; font-weight:600; color:#1E1E1E; margin-bottom:10px; font-family:'DM Sans',sans-serif; }
+.how-step p { font-size:14px; color:#5A5A5A; line-height:1.7; }
+
+/* ── CMBT ─────────────────────────────────── */
+.cmbt { background:#1E1E1E; padding:96px 0; }
+.cmbt-inner { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+.eyebrow-gold { color:#F5B800; }
+.cmbt-left h2 { color:#fff; margin:14px 0 20px; }
+.cmbt-desc { font-size:15px; color:rgba(255,255,255,.6); line-height:1.8; margin-bottom:28px; }
+.cmbt-pillars { display:flex; flex-direction:column; gap:14px; margin-bottom:32px; }
+.cmbt-pillar { display:flex; gap:12px; align-items:flex-start; }
+.cmbt-pillar-dot { width:6px; height:6px; background:#F5B800; border-radius:50%; flex-shrink:0; margin-top:8px; }
+.cmbt-pillar p { font-size:14px; color:rgba(255,255,255,.65); line-height:1.65; }
+.cmbt-pillar strong { color:#fff; }
+.cmbt-right { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); border-radius:20px; padding:40px; text-align:center; }
+.cmbt-badge { display:inline-block; background:#F5B800; color:#1E1E1E; font-weight:700; font-size:10px; letter-spacing:.1em; text-transform:uppercase; padding:6px 14px; border-radius:100px; margin-bottom:18px; }
+.cmbt-name { font-family:'Fraunces',Georgia,serif; font-size:20px; font-weight:300; color:#fff; margin-bottom:12px; line-height:1.3; }
+.cmbt-sub { font-size:13px; color:rgba(255,255,255,.5); line-height:1.7; }
+.cmbt-methods { display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; justify-content:center; }
+.cmbt-method { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); border-radius:100px; padding:6px 14px; font-size:12px; font-weight:500; color:rgba(255,255,255,.7); }
+
+/* ── TESTIMONIALS ─────────────────────────── */
+.testimonials { background:#E8F6FF; padding:96px 0; }
+.t-head { text-align:center; margin-bottom:48px; }
+.t-head h2 { margin:12px 0; color:#1E1E1E; }
+.t-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.t-card { background:#fff; border-radius:16px; padding:32px; border:1px solid rgba(168,223,254,.4); }
+.t-stars { color:#F5B800; font-size:15px; letter-spacing:3px; margin-bottom:14px; }
+.t-quote { font-family:'Fraunces',Georgia,serif; font-size:17px; font-weight:300; font-style:italic; color:#1E1E1E; line-height:1.65; margin-bottom:20px; }
+.t-condition { display:inline-block; background:#E8F6FF; color:#5A5A5A; font-size:11px; font-weight:600; letter-spacing:.07em; text-transform:uppercase; padding:4px 10px; border-radius:100px; border:1px solid rgba(168,223,254,.5); margin-bottom:12px; }
+.t-author { font-size:13px; color:#9A9A9A; }
+
+/* ── JOURNAL ──────────────────────────────── */
+.journal { padding:96px 0; background:#F2EDE8; }
+.journal-head { display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:44px; flex-wrap:wrap; gap:16px; }
+.journal-head h2 { color:#1E1E1E; }
+.j-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.j-card { background:#fff; border-radius:16px; overflow:hidden; border:1px solid rgba(30,30,30,.08); transition:transform .2s; display:block; color:inherit; }
+.j-card:hover { transform:translateY(-3px); }
+.j-img { aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; font-size:42px; }
+.j-body { padding:24px; }
+.j-tag { font-size:10px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:#9A9A9A; display:block; margin-bottom:10px; }
+.j-title { font-family:'Fraunces',Georgia,serif; font-size:18px; font-weight:400; color:#1E1E1E; margin-bottom:8px; line-height:1.35; }
+.j-excerpt { font-size:13px; color:#5A5A5A; line-height:1.65; margin-bottom:16px; }
+.j-read { font-size:12px; font-weight:600; color:#9A9A9A; }
+
+/* ── NEWSLETTER ───────────────────────────── */
+.newsletter { background:#F5B800; padding:80px 0; text-align:center; }
+.newsletter h2 { font-family:'Fraunces',Georgia,serif; font-size:clamp(26px,4vw,46px); font-weight:300; color:#1E1E1E; margin-bottom:12px; line-height:1.15; }
+.newsletter-sub { font-size:16px; color:rgba(30,30,30,.65); margin-bottom:32px; }
+.newsletter-form { display:flex; gap:10px; justify-content:center; max-width:440px; margin:0 auto 14px; }
+.newsletter-form input { flex:1; padding:13px 18px; border-radius:100px; border:none; font-family:'DM Sans',sans-serif; font-size:14px; outline:none; }
+.newsletter-form input::placeholder { color:#aaa; }
+.btn-dark { background:#1E1E1E; color:#fff; font-size:13px; font-weight:600; padding:13px 22px; border-radius:100px; border:none; cursor:pointer; transition:opacity .2s; }
+.btn-dark:hover { opacity:.85; }
+.newsletter-note { font-size:12px; color:rgba(30,30,30,.5); }
+
+/* ── RESPONSIVE ───────────────────────────── */
+
+/* TABLET — 768px */
+@media(max-width:768px) {
+  /* Hero */
+  .hero { min-height:100svh; }
+  .hero-content { padding:96px 0 72px; max-width:100%; }
+  .hero h1 { font-size:clamp(36px,9vw,52px); }
+  .hero-sub { font-size:15px; max-width:100%; }
+  .hero-actions { flex-direction:column; align-items:flex-start; gap:10px; }
+  .btn-gold, .btn-ghost-white { width:100%; text-align:center; }
+  .trust-row { gap:8px; }
+  .trust-chip { font-size:12px; padding:6px 12px; }
+  .hero-scroll { display:none; }
+
+  /* Statement */
+  .statement { padding:56px 0; }
+  .statement-text { font-size:clamp(20px,5vw,30px); margin-bottom:32px; }
+  .compliance-row { gap:20px; flex-direction:column; align-items:center; }
+
+  /* Who it's for — ACCORDION MODE */
+  .who { padding:64px 0; }
+  .who-inner { grid-template-columns:1fr; gap:0; }
+  .who-right { display:none; }              /* hide desktop panel */
+  .who-arrow { display:none; }              /* hide desktop arrow */
+  .who-chevron { display:block; }           /* show mobile chevron */
+  .who-dot { display:none; }               /* dot redundant in accordion */
+  .who-name { font-size:clamp(20px,5vw,26px); color:#1E1E1E; }
+  .who-item.active .who-name { color:#1E1E1E; } /* all dark on mobile */
+  .who-trigger { padding:18px 0; }
+
+  /* How it works */
+  .how { padding:64px 0; }
+  .how-steps { grid-template-columns:1fr; gap:16px; }
+  .how-step { padding:28px 24px; }
+  .how-num { font-size:40px; margin-bottom:12px; }
+
+  /* CMBT */
+  .cmbt { padding:64px 0; }
+  .cmbt-inner { grid-template-columns:1fr; gap:40px; }
+  .cmbt-right { padding:28px; }
+
+  /* Testimonials */
+  .testimonials { padding:64px 0; }
+  .t-grid { grid-template-columns:1fr; gap:16px; }
+
+  /* Journal */
+  .journal { padding:64px 0; }
+  .journal-head { flex-direction:column; align-items:flex-start; gap:16px; }
+  .j-grid { grid-template-columns:1fr; gap:16px; }
+  .j-img { aspect-ratio:16/9; font-size:36px; }
+
+  /* Newsletter */
+  .newsletter { padding:56px 0; }
+  .newsletter-form { flex-direction:column; max-width:100%; }
+  .newsletter-form input { border-radius:12px; }
+  .btn-dark { border-radius:12px; width:100%; }
+}
+
+/* MOBILE — 480px */
+@media(max-width:480px) {
+  /* Hero */
+  .hero-content { padding:80px 0 60px; }
+  .hero h1 { font-size:clamp(32px,10vw,44px); line-height:1.1; }
+  .hero-eyebrow { font-size:11px; padding:5px 12px; }
+  .hero-sub { font-size:14px; margin-bottom:28px; }
+  .hero-actions { margin-bottom:20px; }
+
+  /* Statement */
+  .statement-text { font-size:20px; line-height:1.4; }
+  .hl-ink, .hl-green { padding:1px 6px; border-radius:4px; }
+  .compliance-badge { font-size:13px; }
+  .compliance-icon { width:32px; height:32px; font-size:16px; }
+
+  /* Who it's for — hide panel on mobile, show inline under list item */
+  .who-item { padding:14px 0; }
+  .who-name { font-size:22px; }
+  .who-panel h3 { font-size:18px; }
+  .who-panel p { font-size:14px; }
+  .who-panel-tag { font-size:10px; padding:4px 10px; }
+
+  /* How it works */
+  .how-head h2 { font-size:clamp(24px,7vw,34px); }
+  .how-sub { font-size:14px; }
+  .how-step h3 { font-size:15px; }
+  .how-step p { font-size:13px; }
+
+  /* CMBT */
+  .cmbt-left h2 { font-size:clamp(26px,7vw,36px); }
+  .cmbt-desc { font-size:14px; }
+  .cmbt-pillar p { font-size:13px; }
+  .cmbt-name { font-size:17px; }
+  .cmbt-sub { font-size:12px; }
+  .cmbt-methods { gap:6px; }
+  .cmbt-method { font-size:11px; padding:5px 10px; }
+
+  /* Testimonials */
+  .t-quote { font-size:15px; }
+
+  /* Journal */
+  .j-title { font-size:16px; }
+  .j-excerpt { font-size:13px; }
+
+  /* Newsletter */
+  .newsletter h2 { font-size:clamp(22px,7vw,32px); }
+  .newsletter-sub { font-size:14px; }
+  .newsletter-form input { padding:12px 16px; font-size:14px; }
+}
+
+/* SMALL MOBILE — 380px (iPhone SE etc) */
+@media(max-width:380px) {
+  .hero h1 { font-size:30px; }
+  .hero-eyebrow { font-size:10px; }
+  .trust-chip { font-size:11px; padding:5px 10px; }
+  .statement-text { font-size:18px; }
+  .who-name { font-size:20px; }
+  .cmbt-left h2 { font-size:24px; }
+  .newsletter h2 { font-size:22px; }
+}
+
+/* Touch devices — remove hover effects that don't make sense */
+@media(hover:none) {
+  .j-card:hover { transform:none; }
+  .btn-gold:hover, .btn-ghost-white:hover { transform:none; opacity:1; }
+  .who-item { cursor:pointer; }
 }
 </style>
 
 <script>
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
+// Who it's for — dual mode: desktop panel swap / mobile accordion
+const whoList = document.getElementById('who-list');
+if (whoList) {
+  const isMobile = () => window.innerWidth <= 768;
+
+  whoList.addEventListener('click', e => {
+    const item = e.target.closest('.who-item');
+    if (!item) return;
+
+    if (isMobile()) {
+      // ACCORDION MODE — toggle open/closed, allow multiple closed
+      const isOpen = item.classList.contains('open');
+      // Close all
+      whoList.querySelectorAll('.who-item').forEach(i => i.classList.remove('open'));
+      // Open tapped one unless it was already open
+      if (!isOpen) item.classList.add('open');
+    } else {
+      // DESKTOP MODE — swap active + update right panel
+      whoList.querySelectorAll('.who-item').forEach(i => i.classList.remove('active'));
+      item.classList.add('active');
+      document.querySelectorAll('.who-panel').forEach(p => p.classList.remove('active'));
+      const panel = document.getElementById('panel-' + item.dataset.target);
+      if (panel) panel.classList.add('active');
     }
   });
+}
+
+// Fade-up on scroll
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-
 </script>

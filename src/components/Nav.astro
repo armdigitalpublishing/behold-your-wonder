@@ -1,20 +1,36 @@
 ---
 ---
+
+<!-- ── ANNOUNCEMENT BANNER ─────────────────── -->
+<div class="announce-bar" id="announce-bar">
+  <div class="announce-inner">
+    <p class="announce-text">
+      New: CMBT-informed group therapy now forming for PMDD and perimenopause.
+      <a href="/services" class="announce-link">Learn more</a>
+    </p>
+    <button class="announce-close" id="announce-close" aria-label="Close announcement">✕</button>
+  </div>
+</div>
+
+<!-- ── NAV ────────────────────────────────── -->
 <nav class="nav" id="nav">
   <div class="nav-inner">
     <a href="/" class="nav-logo">
       <img src="/logo.png" alt="Behold Your Wonder" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-      <span style="display:none;color:#fff;font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;">Behold Your Wonder</span>
+      
     </a>
     <div class="nav-links">
       <a href="/about" class="nav-link">About</a>
       <a href="/services" class="nav-link">Services</a>
       <a href="/cmbt" class="nav-link">CMBT</a>
-      <a href="/resources" class="nav-mobile-link">Resources</a>
-<a href="/journal" class="nav-mobile-link">Journal</a>
+      <a href="/resources" class="nav-link">Resources</a>
+      <a href="/journal" class="nav-link">Journal</a>
       <a href="/contact" class="nav-link">Contact</a>
     </div>
-<a href="https://beholdyourwonder.clientsecure.me" class="nav-cta" target="_blank" rel="noopener">Book a consult</a>
+    <div class="nav-actions">
+      <a href="https://beholdyourwonder.clientsecure.me/sign-in" class="nav-signin" target="_blank" rel="noopener">Sign in</a>
+      <a href="https://beholdyourwonder.clientsecure.me" class="nav-cta" target="_blank" rel="noopener">Book a consult</a>
+    </div>
     <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -24,24 +40,109 @@
     <a href="/services" class="nav-mobile-link">Services</a>
     <a href="/cmbt" class="nav-mobile-link">CMBT</a>
     <a href="/resources" class="nav-mobile-link">Resources</a>
+    <a href="/journal" class="nav-mobile-link">Journal</a>
     <a href="/contact" class="nav-mobile-link">Contact</a>
-<a href="https://beholdyourwonder.clientsecure.me" class="nav-mobile-cta" target="_blank" rel="noopener">Book a consult</a>  </div>
+    <a href="https://beholdyourwonder.clientsecure.me" class="nav-mobile-cta" target="_blank" rel="noopener">Book a consult</a>
+  </div>
 </nav>
+
+<style>
+/* ── ANNOUNCEMENT BANNER ──────────────────── */
+.announce-bar {
+  background: var(--gold);
+  padding: 11px 24px;
+  position: relative;
+}
+.announce-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.announce-text {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  text-align: center;
+}
+.announce-link {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  margin-left: 6px;
+}
+.announce-close {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 13px;
+  color: var(--ink);
+  opacity: 0.5;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+}
+.announce-close:hover { opacity: 1; }
+.announce-bar.hidden { display: none; }
+
+/* ── NAV SIGNIN LINK ──────────────────────── */
+.nav-signin {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  padding: 7px 12px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.nav-signin:hover { color: var(--ink-soft); }
+
+@media (max-width: 720px) {
+  .announce-text { font-size: 12px; }
+  .announce-close { right: 10px; }
+}
+</style>
 
 <script>
 const nav = document.getElementById('nav');
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('nav-mobile');
+const announceBar = document.getElementById('announce-bar');
+const announceClose = document.getElementById('announce-close');
+
+// Banner dismiss
+if (announceClose && announceBar) {
+  announceClose.addEventListener('click', () => {
+    announceBar.classList.add('hidden');
+  });
+}
+
+// Scroll shadow
 window.addEventListener('scroll', () => {
-  nav.style.background = window.scrollY > 20 ? 'rgba(42,56,40,0.96)' : '#2A3828';
+  nav.classList.toggle('scrolled', window.scrollY > 20);
 }, { passive: true });
+
+// Mobile menu
 hamburger.addEventListener('click', () => {
   const isOpen = mobileMenu.classList.toggle('open');
   hamburger.classList.toggle('open', isOpen);
-  hamburger.setAttribute('aria-expanded', isOpen);
+  hamburger.setAttribute('aria-expanded', String(isOpen));
 });
+
 mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   mobileMenu.classList.remove('open');
   hamburger.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
 }));
+
+// Mark active link
+const path = window.location.pathname;
+document.querySelectorAll('.nav-link').forEach(link => {
+  if (link.getAttribute('href') === path) link.classList.add('active');
+});
 </script>

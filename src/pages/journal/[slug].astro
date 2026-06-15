@@ -20,172 +20,160 @@ export async function getStaticPaths() {
 
 const { article, prev, next, more } = Astro.props;
 const { Content } = await render(article);
+
+const categoryColors: Record<string, string> = {
+  'Hormonal Health': 'hormonal',
+  'Mental Wellness': 'mental',
+  'Clinical Insights': 'clinical',
+  'Perinatal': 'perinatal',
+};
+const colorClass = categoryColors[article.data.category] || 'clinical';
 ---
 
-<Layout title={article.data.title}>
-  <article class="article-body">
-    <div class="container">
-      <div class="article-header">
-        <span class="art-cat">{article.data.category}</span>
-        <h1>{article.data.title}</h1>
-        <p class="article-meta">{article.data.readTime} read</p>
-      </div>
-      <div class="article-content">
-        <Content />
-      </div>
-      <nav class="article-nav">
-        {prev && (
-          <a href={`/journal/${prev.id}`} class="article-nav-link article-nav-prev">
-            <span class="article-nav-label">← Previous</span>
-            <span class="article-nav-title">{prev.data.title}</span>
-          </a>
-        )}
-        {next && (
-          <a href={`/journal/${next.id}`} class="article-nav-link article-nav-next">
-            <span class="article-nav-label">Next →</span>
-            <span class="article-nav-title">{next.data.title}</span>
-          </a>
-        )}
-      </nav>
+<Layout title={article.data.title} description={article.data.excerpt}>
+  <article class="article-wrap">
 
-      {more.length > 0 && (
-        <div class="more-articles">
-          <h3 class="more-title">More from the journal</h3>
-          <div class="more-grid">
-            {more.map((a) => (
-              <a href={`/journal/${a.id}`} class="more-card">
-                <span class="more-cat">{a.data.category}</span>
-                <p class="more-card-title">{a.data.title}</p>
-                <span class="more-meta">{a.data.readTime} read</span>
-              </a>
-            ))}
-          </div>
+    <!-- Article hero -->
+    <div class={`article-hero art-hero-${colorClass}`}>
+      <div class="container">
+        <div class="article-hero-inner fade-up">
+          <a href="/journal" class="article-back">← Back to journal</a>
+          <span class={`art-cat cat-${colorClass}`}>{article.data.category}</span>
+          <h1>{article.data.title}</h1>
+          <p class="article-meta">{article.data.readTime} read</p>
         </div>
-      )}
+      </div>
     </div>
+
+    <!-- Article body -->
+    <div class="article-body">
+      <div class="container">
+        <div class="article-content">
+          <Content />
+        </div>
+
+        <!-- Prev / Next nav -->
+        <nav class="article-nav">
+          {prev && (
+            <a href={`/journal/${prev.id}`} class="article-nav-link article-nav-prev">
+              <span class="article-nav-label">← Previous</span>
+              <span class="article-nav-title">{prev.data.title}</span>
+            </a>
+          )}
+          {next && (
+            <a href={`/journal/${next.id}`} class="article-nav-link article-nav-next">
+              <span class="article-nav-label">Next →</span>
+              <span class="article-nav-title">{next.data.title}</span>
+            </a>
+          )}
+        </nav>
+
+        <!-- More articles -->
+        {more.length > 0 && (
+          <div class="more-articles">
+            <h3 class="more-title">More from the journal</h3>
+            <div class="more-grid">
+              {more.map((a) => {
+                const mc = categoryColors[a.data.category] || 'clinical';
+                return (
+                  <a href={`/journal/${a.id}`} class="more-card">
+                    <div class={`more-card-top art-top ${mc}`}></div>
+                    <div class="more-card-body">
+                      <span class={`art-cat cat-${mc}`}>{a.data.category}</span>
+                      <p class="more-card-title">{a.data.title}</p>
+                      <span class="more-meta">{a.data.readTime} read</span>
+                    </div>
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="article-cta">
+      <div class="container">
+        <p class="article-cta-label">Ready to talk to someone who understands?</p>
+        <a href="https://beholdyourwonder.clientsecure.me" class="btn-primary" target="_blank" rel="noopener">Book a consultation</a>
+      </div>
+    </div>
+
   </article>
 </Layout>
 
 <style>
-  .article-body { padding: 80px 0; background: #F5EFE8; }
-  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-  .article-header { max-width: 720px; margin: 0 auto 60px; text-align: center; }
-  .article-header h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); color: #1E2D1E; margin: 12px 0; }
-  .article-meta { color: #2A3828; font-size: 0.9rem; }
-  .art-cat { font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: #C4917A; }
-  .article-content { max-width: 720px; margin: 0 auto; }
-  :global(.article-content p) { margin-bottom: 24px; font-size: 1.1rem; line-height: 1.8; color: #1E2D1E; }
-  :global(.article-content h2) { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.4rem, 2.5vw, 1.8rem); margin: 60px 0 16px; color: #1E2D1E; }
-  :global(.article-content strong) { color: #1E2D1E; font-weight: 600; }
-  :global(.article-content em) { font-style: italic; color: #1E2D1E; }
-  :global(.article-content ul) { margin-bottom: 24px; padding-left: 24px; }
-  :global(.article-content li) { margin-bottom: 8px; font-size: 1.1rem; line-height: 1.8; color: #1E2D1E; }
-  :global(.article-content a) { color: #C4917A; text-decoration: underline; text-underline-offset: 3px; }
-  :global(.article-content a:hover) { color: #1E2D1E; }
+/* Hero */
+.article-hero { padding: clamp(48px,8vw,80px) 0 clamp(40px,6vw,64px); }
+.art-hero-hormonal { background: var(--ink); }
+.art-hero-mental   { background: var(--ink); }
+.art-hero-clinical { background: var(--ink); }
+.art-hero-perinatal{ background: var(--ink); }
+.article-hero-inner { max-width: 760px; }
+.article-back { display:inline-block; font-size:13px; color:rgba(255,255,255,0.5); margin-bottom:24px; transition:color 0.15s; }
+.article-back:hover { color:#fff; }
+.article-hero h1 { font-family:var(--serif); font-size:clamp(28px,4vw,48px); font-weight:300; color:#fff; margin:14px 0 16px; line-height:1.15; }
+.article-meta { font-size:13px; color:rgba(255,255,255,0.4); }
 
-  .article-nav {
-    max-width: 720px;
-    margin: 60px auto 0;
-    display: flex;
-    justify-content: space-between;
-    gap: 24px;
-    padding-top: 40px;
-    border-top: 1px solid #e0d9d0;
-  }
-  .article-nav-link {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    text-decoration: none;
-    max-width: 45%;
-  }
-  .article-nav-prev { align-items: flex-start; }
-  .article-nav-next { align-items: flex-end; margin-left: auto; }
-  .article-nav-label {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #C4917A;
-    font-weight: 500;
-  }
-  .article-nav-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1rem;
-    color: #1E2D1E;
-    line-height: 1.4;
-  }
-  .article-nav-title:hover { text-decoration: underline; }
-  .more-articles {
-    max-width: 720px;
-    margin: 60px auto 0;
-    padding-top: 40px;
-    border-top: 1px solid #e0d9d0;
-  }
-  .more-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
-    color: #1E2D1E;
-    margin: 0 0 24px;
-  }
-  .more-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
-  .more-card {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    text-decoration: none;
-    background: white;
-    border-radius: 8px;
-    padding: 20px;
-    transition: transform 0.2s ease;
-  }
-  .more-card:hover { transform: translateY(-3px); }
-  .more-cat {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #C4917A;
-    font-weight: 500;
-  }
-  .more-card-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    color: #1E2D1E;
-    line-height: 1.4;
-    margin: 0;
-  }
-  .more-meta {
-    font-size: 0.8rem;
-    color: #999;
-  }
+/* Category badges */
+.art-cat { display:inline-block; font-size:10px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; padding:4px 10px; border-radius:4px; }
+.cat-hormonal { background:rgba(245,184,0,0.2); color:var(--gold); }
+.cat-mental   { background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.7); }
+.cat-clinical { background:rgba(125,217,138,0.2); color:#7DD98A; }
+.cat-perinatal{ background:rgba(247,138,138,0.2); color:#F78A8A; }
 
-  :global(.article-content h3) {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
-    color: #1E2D1E;
-    margin: 40px 0 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    font-weight: 600;
-  }
-  :global(.article-content h3 + ul) {
-    background: white;
-    border-left: 3px solid #C4917A;
-    border-radius: 0 8px 8px 0;
-    padding: 20px 24px 20px 32px;
-    margin-bottom: 40px;
-  }
-  :global(.article-content h3 + ul li) {
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #1E2D1E;
-    margin-bottom: 10px;
-  }
-  :global(.article-content h3 + ul li strong) {
-    color: #1E2D1E;
-    font-weight: 600;
-  }
+/* Body */
+.article-body { background:var(--cream); padding: clamp(48px,8vw,80px) 0; }
+.article-content { max-width:720px; margin:0 auto; }
+
+/* Prose styles */
+:global(.article-content p) { margin-bottom:22px; font-size:clamp(15px,1.8vw,17px); line-height:1.85; color:var(--ink-soft); }
+:global(.article-content h2) { font-family:var(--serif); font-size:clamp(22px,3vw,32px); font-weight:300; margin:56px 0 16px; color:var(--ink); }
+:global(.article-content h3) { font-family:var(--sans); font-size:clamp(13px,1.5vw,15px); font-weight:700; margin:40px 0 12px; color:var(--ink); text-transform:uppercase; letter-spacing:0.08em; }
+:global(.article-content h3 + ul) { background:#fff; border-left:3px solid var(--gold); border-radius:0 var(--radius-md) var(--radius-md) 0; padding:20px 24px 20px 28px; margin-bottom:32px; }
+:global(.article-content h3 + ul li) { font-size:clamp(13px,1.5vw,15px); line-height:1.75; color:var(--ink-soft); margin-bottom:10px; }
+:global(.article-content h3 + ul li strong) { color:var(--ink); font-weight:600; }
+:global(.article-content strong) { color:var(--ink); font-weight:600; }
+:global(.article-content em) { font-style:italic; }
+:global(.article-content ul) { margin-bottom:22px; padding-left:22px; }
+:global(.article-content li) { margin-bottom:8px; font-size:clamp(14px,1.6vw,16px); line-height:1.8; color:var(--ink-soft); }
+:global(.article-content a) { color:var(--gold-dk); text-decoration:underline; text-underline-offset:3px; }
+:global(.article-content a:hover) { color:var(--ink); }
+
+/* Prev / next nav */
+.article-nav { max-width:720px; margin:56px auto 0; display:flex; justify-content:space-between; gap:24px; padding-top:36px; border-top:1px solid var(--border); }
+.article-nav-link { display:flex; flex-direction:column; gap:6px; max-width:45%; }
+.article-nav-next { align-items:flex-end; margin-left:auto; }
+.article-nav-label { font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--gold-dk); font-weight:600; }
+.article-nav-title { font-family:var(--serif); font-size:15px; color:var(--ink); line-height:1.4; font-weight:300; }
+.article-nav-title:hover { text-decoration:underline; }
+
+/* More articles */
+.more-articles { max-width:720px; margin:48px auto 0; padding-top:36px; border-top:1px solid var(--border); }
+.more-title { font-family:var(--serif); font-size:22px; font-weight:300; color:var(--ink); margin-bottom:20px; }
+.more-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.more-card { display:flex; flex-direction:column; background:#fff; border-radius:var(--radius-lg); overflow:hidden; border:0.5px solid var(--border); transition:transform 0.2s,border-color 0.2s; color:inherit; }
+.more-card:hover { transform:translateY(-2px); border-color:var(--gold); }
+.more-card-top { height:4px; }
+.art-top.hormonal { background:var(--gold); }
+.art-top.mental   { background:var(--ink); }
+.art-top.clinical { background:var(--green); }
+.art-top.perinatal{ background:var(--blush); }
+.more-card-body { padding:18px; display:flex; flex-direction:column; gap:8px; }
+.more-card-title { font-family:var(--serif); font-size:15px; color:var(--ink); line-height:1.4; font-weight:400; margin:0; }
+.more-meta { font-size:11px; color:#AAA; }
+
+/* CTA strip */
+.article-cta { background:var(--gold); padding:48px 0; text-align:center; }
+.article-cta-label { font-size:16px; font-weight:500; color:var(--ink); margin-bottom:20px; }
+
+@media(max-width:600px) { .more-grid { grid-template-columns:1fr; } .article-nav { flex-direction:column; } .article-nav-next { align-items:flex-start; margin-left:0; } }
 </style>
+
+<script>
+const observer = new IntersectionObserver(e => {
+  e.forEach(t => { if(t.isIntersecting){ t.target.classList.add('visible'); observer.unobserve(t.target); }});
+}, {threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>

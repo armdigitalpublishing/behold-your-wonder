@@ -7,9 +7,32 @@ import Layout from '../layouts/Layout.astro';
 <section class="page-hero">
   <div class="container fade-up">
     <span class="eyebrow eyebrow-light">Our clinical modality</span>
+    <div class="trademark-block">Behold Your Wonder Center<br>Core Messaging Based Therapy™</div>
+    <p class="trademark-desc">Core Messaging Based Therapy™ is the proprietary clinical framework developed and offered through the Behold Your Wonder Center for Core Messaging Based Therapy™.</p>
     <h1>A therapy built around<br>the messages that shape you.</h1>
-    <p class="page-hero-sub">Core Messaging Based Therapy™ helps clients uncover, explore, and reframe the internalized beliefs formed through early experience, pivotal relationships, and societal influence.</p>
-    <span class="trademark-block">Behold Your Wonder Center Core Messaging Based Therapy</span>
+    <p class="page-hero-sub">CMBT™ helps clients uncover, explore, and reframe the internalized beliefs formed through early experience, pivotal relationships, and societal influence.</p>
+  </div>
+</section>
+
+<section class="about-center">
+  <div class="container">
+    <div class="about-center-inner fade-up">
+      <div class="about-center-text">
+        <span class="eyebrow eyebrow-dark">About the Center</span>
+        <h2>The clinical, educational, and training home of CMBT™</h2>
+        <p>The Behold Your Wonder Center for Core Messaging Based Therapy™ serves as the clinical, educational, and training home of the CMBT™ framework. It is the institution through which the modality is practiced, taught, and advanced.</p>
+      </div>
+      <div class="about-center-list">
+        <p class="about-center-list-label">The Center provides</p>
+        <ul class="about-center-items">
+          <li><span class="center-dot"></span>Psychotherapy services</li>
+          <li><span class="center-dot"></span>Clinical mental health counseling</li>
+          <li><span class="center-dot"></span>Professional training</li>
+          <li><span class="center-dot"></span>Certification programs</li>
+          <li><span class="center-dot"></span>Educational workshops</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -117,6 +140,30 @@ import Layout from '../layouts/Layout.astro';
   </div>
 </section>
 
+<section class="clinical-services">
+  <div class="container">
+    <div class="clinical-services-inner fade-up">
+      <div class="clinical-services-text">
+        <span class="eyebrow eyebrow-dark">Clinical services</span>
+        <h2>Therapy Using Core Messaging Based Therapy™</h2>
+        <p>The Behold Your Wonder Center for Core Messaging Based Therapy™ provides psychotherapy and clinical mental health counseling services utilizing the Core Messaging Based Therapy™ framework.</p>
+        <a href="https://beholdyourwonder.clientsecure.me" class="btn-primary" target="_blank" rel="noopener">Schedule a consultation</a>
+      </div>
+      <div class="clinical-services-list">
+        <p class="clinical-services-label">Areas of support include</p>
+        <ul class="clinical-items">
+          <li><span class="center-dot"></span>Women's hormonal mental health</li>
+          <li><span class="center-dot"></span>Emotional overwhelm</li>
+          <li><span class="center-dot"></span>Relationship concerns</li>
+          <li><span class="center-dot"></span>Anxiety</li>
+          <li><span class="center-dot"></span>Life transitions</li>
+          <li><span class="center-dot"></span>Identity development</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="cmbt-training">
   <div class="container fade-up">
     <span class="eyebrow eyebrow-light">For clinicians</span>
@@ -132,52 +179,81 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-.page-hero{background:var(--green-dark);padding:clamp(64px,10vw,110px) 0;text-align:center}
-.page-hero h1{color:#fff;margin-bottom:18px}
-.page-hero-sub{font-size:clamp(14px,1.8vw,16px);color:rgba(255,255,255,0.6);line-height:1.75;max-width:580px;margin:0 auto 32px}
-.trademark-block{display:inline-block;border:0.5px solid rgba(196,145,122,0.4);border-radius:var(--radius-pill);padding:8px 22px;font-size:11px;letter-spacing:0.08em;color:var(--rose);text-transform:uppercase}
+.page-hero{background:var(--ink);padding:clamp(64px,10vw,110px) 0;text-align:center}
+.page-hero h1{color:#fff;margin-bottom:18px;font-size:clamp(24px,3.5vw,42px)}
+.page-hero-sub{font-size:clamp(14px,1.8vw,16px);color:rgba(255,255,255,0.55);line-height:1.75;max-width:580px;margin:0 auto}
+.trademark-block{display:inline-block;font-family:var(--serif);font-size:clamp(22px,3vw,38px);font-weight:300;color:#fff;line-height:1.2;margin:16px 0 14px}
+.trademark-desc{font-size:clamp(13px,1.5vw,15px);color:rgba(255,255,255,0.5);line-height:1.75;max-width:600px;margin:0 auto 36px}
+
+/* ── ABOUT THE CENTER ─────────────────────── */
+.about-center{background:var(--cream);padding:var(--pad) 0}
+.about-center-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:start}
+.about-center-text h2{color:var(--ink);margin:12px 0 16px}
+.about-center-text p{font-size:clamp(14px,1.6vw,16px);color:var(--ink-soft);line-height:1.85}
+.about-center-list{background:#fff;border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:clamp(24px,3vw,36px)}
+.about-center-list-label{font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:18px;display:block}
+.about-center-items{list-style:none;display:flex;flex-direction:column;gap:12px}
+.about-center-items li{display:flex;align-items:center;gap:12px;font-size:15px;font-weight:500;color:var(--ink)}
+.center-dot{width:7px;height:7px;border-radius:50%;background:var(--gold);flex-shrink:0}
+
+/* ── CLINICAL SERVICES ────────────────────── */
+.clinical-services{background:var(--cream);padding:var(--pad) 0;border-top:1px solid var(--border)}
+.clinical-services-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:start}
+.clinical-services-text h2{color:var(--ink);margin:12px 0 16px}
+.clinical-services-text p{font-size:clamp(14px,1.6vw,16px);color:var(--ink-soft);line-height:1.85;margin-bottom:28px}
+.clinical-services-list{background:var(--ink);border-radius:var(--radius-lg);padding:clamp(28px,4vw,44px)}
+.clinical-services-label{font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:18px;display:block}
+.clinical-items{list-style:none;display:flex;flex-direction:column;gap:14px}
+.clinical-items li{display:flex;align-items:center;gap:12px;font-size:15px;font-weight:500;color:#fff}
+.clinical-items .center-dot{background:var(--gold)}
+
 .what{background:var(--cream);padding:var(--pad) 0}
 .what-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:start}
-.what h2{color:var(--green-dark);margin-bottom:18px}
-.what-text{font-size:clamp(14px,1.6vw,16px);color:#5A4A40;line-height:1.85}
+.what h2{color:var(--ink);margin-bottom:18px}
+.what-text{font-size:clamp(14px,1.6vw,16px);color:var(--ink-soft);line-height:1.85}
 .what-text p+p{margin-top:14px}
-.what-features{background:var(--green-mid);border-radius:var(--radius-lg);padding:clamp(28px,4vw,44px)}
-.what-features-label{font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:20px;display:block}
+.what-features{background:var(--ink);border-radius:var(--radius-lg);padding:clamp(28px,4vw,44px)}
+.what-features-label{font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:20px;display:block}
 .what-feature{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px}
-.what-dot{width:6px;height:6px;border-radius:50%;background:var(--rose);flex-shrink:0;margin-top:7px}
+.what-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:7px}
 .what-feature-title{font-size:14px;font-weight:500;color:#fff;margin-bottom:4px}
 .what-feature-desc{font-size:12px;color:rgba(255,255,255,0.5);line-height:1.65}
-.foundations{background:var(--green-mid);padding:var(--pad) 0}
+
+.foundations{background:var(--ink);padding:var(--pad) 0}
 .foundations-head{text-align:center;margin-bottom:clamp(36px,5vw,52px)}
 .foundations-head h2{color:#fff}
 .found-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--gap)}
 .found-card{background:rgba(255,255,255,0.05);border:0.5px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:clamp(22px,3vw,32px)}
 .found-title{font-size:clamp(14px,1.6vw,16px);font-weight:500;color:#fff;margin-bottom:10px}
-.found-desc{font-size:clamp(12px,1.3vw,13px);color:rgba(255,255,255,0.52);line-height:1.75}
+.found-desc{font-size:clamp(12px,1.3vw,13px);color:rgba(255,255,255,0.5);line-height:1.75}
+
 .phases{background:var(--cream);padding:var(--pad) 0}
 .phases-head{text-align:center;margin-bottom:clamp(40px,5vw,60px)}
-.phases-head h2{color:var(--green-dark)}
+.phases-head h2{color:var(--ink)}
 .phase-list{display:flex;flex-direction:column}
-.phase{display:grid;grid-template-columns:80px 1fr;gap:clamp(24px,4vw,48px);padding:clamp(32px,4vw,48px) 0;border-bottom:0.5px solid rgba(30,45,30,0.1);align-items:start}
+.phase{display:grid;grid-template-columns:80px 1fr;gap:clamp(24px,4vw,48px);padding:clamp(32px,4vw,48px) 0;border-bottom:0.5px solid var(--border);align-items:start}
 .phase:last-child{border-bottom:none}
-.phase-num{font-family:var(--serif);font-size:clamp(52px,7vw,80px);font-weight:400;color:rgba(196,145,122,0.25);line-height:1}
-.phase-content h3{color:var(--green-dark);margin-bottom:12px}
-.phase-content p{font-size:clamp(13px,1.5vw,15px);color:#5A4A40;line-height:1.8;margin-bottom:16px}
+.phase-num{font-family:var(--serif);font-size:clamp(52px,7vw,80px);font-weight:300;color:rgba(245,184,0,0.3);line-height:1}
+.phase-content h3{color:var(--ink);margin-bottom:12px}
+.phase-content p{font-size:clamp(13px,1.5vw,15px);color:var(--ink-soft);line-height:1.8;margin-bottom:16px}
 .phase-techniques{display:flex;flex-wrap:wrap;gap:8px}
-.technique-tag{font-size:11px;background:rgba(30,45,30,0.06);color:#5A4A40;padding:5px 12px;border-radius:var(--radius-pill);border:0.5px solid rgba(30,45,30,0.1)}
-.concepts{background:var(--green-dark);padding:var(--pad) 0}
+.technique-tag{font-size:11px;background:rgba(30,30,30,0.06);color:var(--ink-soft);padding:5px 12px;border-radius:var(--radius-pill);border:0.5px solid var(--border)}
+
+.concepts{background:var(--ink);padding:var(--pad) 0}
 .concepts-head{text-align:center;margin-bottom:clamp(36px,5vw,52px)}
 .concepts-head h2{color:#fff}
 .concept-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
 .concept-card{background:rgba(255,255,255,0.04);border:0.5px solid rgba(255,255,255,0.09);border-radius:var(--radius-lg);padding:clamp(22px,3vw,30px)}
 .concept-name{font-size:clamp(14px,1.6vw,16px);font-weight:500;color:#fff;margin-bottom:10px}
 .concept-def{font-size:clamp(12px,1.3vw,13px);color:rgba(255,255,255,0.5);line-height:1.75}
-.cmbt-training{background:var(--green-mid);padding:var(--pad) 0;text-align:center}
-.cmbt-training h2{color:#fff;margin-bottom:14px}
-.cmbt-training p{font-size:clamp(13px,1.5vw,15px);color:rgba(255,255,255,0.55);max-width:520px;margin:0 auto 32px;line-height:1.75}
-.btn-outline-light{border:1px solid rgba(255,255,255,0.3);color:rgba(255,255,255,0.8);font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:13px 32px;border-radius:var(--radius-pill);display:inline-block;transition:border-color 0.2s,color 0.2s}
-.btn-outline-light:hover{border-color:#fff;color:#fff}
-@media(max-width:900px){.what-grid,.found-grid{grid-template-columns:1fr}.concept-grid{grid-template-columns:repeat(2,1fr)}.phase{grid-template-columns:60px 1fr;gap:16px}}
+
+.cmbt-training{background:var(--gold);padding:var(--pad) 0;text-align:center}
+.cmbt-training h2{color:var(--ink);margin-bottom:14px}
+.cmbt-training p{font-size:clamp(13px,1.5vw,15px);color:rgba(30,30,30,0.65);max-width:520px;margin:0 auto 32px;line-height:1.75}
+.btn-outline-light{border:1.5px solid rgba(30,30,30,0.4);color:var(--ink);font-size:13px;font-weight:500;padding:13px 30px;border-radius:var(--radius-pill);display:inline-block;transition:border-color 0.2s}
+.btn-outline-light:hover{border-color:var(--ink)}
+
+@media(max-width:900px){.what-grid,.found-grid,.about-center-inner,.clinical-services-inner{grid-template-columns:1fr}.concept-grid{grid-template-columns:repeat(2,1fr)}.phase{grid-template-columns:60px 1fr;gap:16px}}
 @media(max-width:600px){.concept-grid{grid-template-columns:1fr}}
 </style>
 
